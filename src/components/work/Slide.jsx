@@ -1,11 +1,14 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
+import { gsap } from "gsap";
+import SplitType from 'split-type';
 
 import arrow2 from '../../assets/image/arrow2.svg'
 
 const Slide = () => {
     const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
 
+    // 마우스 커서
     const handleMouseMove = (e) => {
         setCursorPosition({ x: e.clientX, y: e.clientY });
     };
@@ -17,6 +20,41 @@ const Slide = () => {
             document.removeEventListener('mousemove', handleMouseMove);
         };
     }, []);
+
+    // text 회전
+    const circleRef = useRef(null);
+
+    useEffect(() => {
+        const circle = circleRef.current;
+
+        circle.addEventListener("mouseover", () => {
+            const target = gsap.utils.toArray(".split");
+            target.forEach(target => {
+                let splitClient = new SplitType(target, { type: "char" })
+                let chars = splitClient.chars;
+
+                gsap.from(chars, {
+                    xPercent: "200",
+                    rotationY: "+=180",
+                    transformOrigin: "center center"
+                })
+            })
+        })
+
+        circle.addEventListener("mouseout", () => {
+            const target = gsap.utils.toArray(".split");
+            target.forEach(target => {
+                let splitClient = new SplitType(target, { type: "char" })
+                let chars = splitClient.chars;
+
+                gsap.from(chars, {
+                    xPercent: "-200",
+                    rotationY: "+=180",
+                    transformOrigin: "center center"
+                })
+            })
+        })
+    }, [circleRef])
     return (
         <div className='work_Detail'>
             <div className="mouse__cursor" style={{ left: cursorPosition.x, top: cursorPosition.y }}></div>
@@ -27,11 +65,11 @@ const Slide = () => {
             {/* work__title */}
 
             <div className="work_center top_l">
-                <span className='center_text'>slide <p>site</p></span>
+                <span className='center_text split'>slide <p>site</p></span>
                 <div className="work_img_wrap">
                     <div className='work_img slide'></div>
                     <div className="circle_wrap">
-                        <div className='circle'></div>
+                        <div className='circle' ref={circleRef}></div>
                     </div>
                 </div>
                 <div className="desc">
