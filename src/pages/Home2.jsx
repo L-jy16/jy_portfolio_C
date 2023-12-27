@@ -1,15 +1,18 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { gsap } from 'gsap';
 import { Flip } from 'gsap/Flip';
 
 import arrow from '../assets/image/arrow.svg'
 import arrow2 from '../assets/image/arrow2.svg'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 gsap.registerPlugin(Flip);
 
 const Home2 = () => {
     const [enter, setEnter] = useState(false);
+    const [activedark, setAactivedark] = useState("");
+    const [move, setMove] = useState("")
+    const navgaite = useNavigate();
 
     const activeHandle = () => {
         setEnter(true);
@@ -45,12 +48,40 @@ const Home2 = () => {
         gsap.from('.main_img_wrap', animationConfig);
     };
 
-    const LinkHandler = (e) => {
-        if (!enter) {
-            e.preventDefault();
-            console.log('지금은 넘어갈 수 없다!');
-        }
+    const handleHover = (index) => {
+        setAactivedark(index);
     };
+
+    const handleLeave = () => {
+        setAactivedark(null);
+    };
+
+    const LinkHandler = (e) => {
+        setMove(e)
+    }
+
+    useEffect(() => {
+        const tl = gsap.timeline();
+        switch (move) {
+            case "i2":
+                tl.to(".center, #main__title", { opacity: 0, duration: 0.41 })
+                tl.to(".i1", { opacity: 0, duration: 0.41 })
+                tl.to(".i3", { opacity: 0, duration: 0.41 })
+                tl.to(".i4", { opacity: 0, duration: 0.41 })
+                tl.to(".i5", { opacity: 0, duration: 0.41 })
+                tl.to(".i6", { opacity: 0, duration: 0.41 })
+                tl.to(".i7", { opacity: 0, duration: 0.41 })
+                tl.to(".i8", { opacity: 0, duration: 0.41 })
+                tl.to(".i9", { opacity: 0, duration: 0.41 })
+                tl.to(".i10", { opacity: 0, duration: 0.41 })
+                tl.to(".i11", { opacity: 0, duration: 0.41 })
+                tl.to(".i12", { opacity: 0, duration: 0.41 })
+                tl.to(".a2", { xPercent: "40%", yPercent: "30vh", height: "70vh", width: "60%" })
+                // .add(() => navgaite("/skill")); 
+                break;
+        }
+    }, [])
+
 
     return (
         <div id='wrap'>
@@ -66,107 +97,191 @@ const Home2 = () => {
                 </div>
 
                 <div className="up">
-                    <Link to="/" className="main_img_wrap" onClick={(e) => LinkHandler(e)}>
-                        <div className="main_img i1">
+                    <div
+                        className='main_img_wrap a1'
+                        // className={` ${activedark ? (activedark === 'i1' ? 'main_img_wrap activedark i1' : 'main_img_wrap gray i1') : 'main_img_wrap i1'}`}
+                        onClick={() => LinkHandler('i1')}
+                        onMouseEnter={() => handleHover('i1')}
+                        onMouseLeave={handleLeave}
+                    >
+                        {/* <div className='main_img i1'> */}
+                        <div className={` ${activedark ? (activedark === 'i1' ? 'main_img activedark i1' : 'main_img gray i1') : 'main_img i1'}`}>
                             {/* <div className="move">
                                 <img src={arrow2} alt="arrow" />
                                 <span>none</span>
                             </div> */}
                         </div>
-                    </Link>
-                    <Link to="/skill" className="main_img_wrap" onClick={(e) => LinkHandler(e)}>
-                        <div className="main_img i2">
+                    </div>
+                    <div
+                        className='main_img_wrap a2'
+                        // className={` ${activedark ? (activedark === 'i2' ? 'main_img_wrap activedark i2' : 'main_img_wrap gray i2') : 'main_img_wrap i2'}`}
+                        onClick={() => LinkHandler('i2')}
+                        onMouseEnter={() => handleHover('i2')}
+                        onMouseLeave={handleLeave}
+                    >
+                        {/* <div className='main_img i2'> */}
+                        <div className={` ${activedark ? (activedark === 'i2' ? 'main_img activedark i2' : 'main_img gray i2') : 'main_img i2'}`}>
                             <div className="move">
                                 <img src={arrow2} alt="arrow" />
                                 <span>Skill</span>
                             </div>
                         </div>
-                    </Link>
-                    <Link to="/aboutme" className="main_img_wrap" onClick={(e) => LinkHandler(e)}>
-                        <div className="main_img i3">
+                    </div>
+                    <div
+                        className='main_img_wrap a3'
+                        // className={` ${activedark ? (activedark === 'i3' ? 'main_img_wrap activedark i3' : 'main_img_wrap gray i3') : 'main_img_wrap i3'}`}
+                        onClick={() => LinkHandler('i3')}
+                        onMouseEnter={() => handleHover('i3')}
+                        onMouseLeave={handleLeave}
+                    >
+                        {/* <div className='main_img i3'> */}
+                        <div className={` ${activedark ? (activedark === 'i3' ? 'main_img activedark i3' : 'main_img gray i3') : 'main_img i3'}`}>
                             <div className="move">
                                 <img src={arrow2} alt="arrow" />
                                 <span>About Me</span>
                             </div>
                         </div>
-                    </Link>
-                    <Link to="/content" className="main_img_wrap" onClick={(e) => LinkHandler(e)}>
-                        <div className="main_img i4">
+                    </div>
+                    <div
+                        className='main_img_wrap a4'
+                        // className={` ${activedark ? (activedark === 'i4' ? 'main_img_wrap activedark i4' : 'main_img_wrap gray i4') : 'main_img_wrap i4'}`}
+                        onClick={() => LinkHandler('i4')}
+                        onMouseEnter={() => handleHover('i4')}
+                        onMouseLeave={handleLeave}
+                    >
+                        {/* <div className='main_img i4'> */}
+                        <div className={` ${activedark ? (activedark === 'i4' ? 'main_img activedark i4' : 'main_img gray i4') : 'main_img i4'}`}>
                             <div className="move">
                                 <img src={arrow2} alt="arrow" />
                                 <span>Content</span>
                             </div>
                         </div>
-                    </Link>
-                    <Link to="/" className="main_img_wrap" onClick={(e) => LinkHandler(e)}>
-                        <div className="main_img i5">
+                    </div>
+                    <div
+                        className='main_img_wrap a5'
+                        // className={` ${activedark ? (activedark === 'i5' ? 'main_img_wrap activedark i5' : 'main_img_wrap gray i5') : 'main_img_wrap i5'}`}
+                        onClick={() => LinkHandler('i5')}
+                        onMouseEnter={() => handleHover('i5')}
+                        onMouseLeave={handleLeave}
+                    >
+                        {/* <div className='main_img i5'> */}
+                        <div className={` ${activedark ? (activedark === 'i5' ? 'main_img activedark i5' : 'main_img gray i5') : 'main_img i5'}`}>
                             {/* <div className="move">
                                 <img src={arrow2} alt="arrow" />
                                 <span>none</span>
                             </div> */}
                         </div>
-                    </Link>
+                    </div>
                 </div>
                 <div className="center">
                     <span className='center_text'>selected <p>works</p></span>
                 </div>
                 <div className="down">
-                    <Link to="/youtube" className="main_img_wrap" onClick={(e) => LinkHandler(e)}>
-                        <div className="main_img i6">
+                    <div
+                        className='main_img_wrap a6'
+                        // className={` ${activedark ? (activedark === 'i6' ? 'main_img_wrap activedark i6' : 'main_img_wrap gray i6') : 'main_img_wrap i6'}`}
+                        onClick={() => LinkHandler('i6')}
+                        onMouseEnter={() => handleHover('i6')}
+                        onMouseLeave={handleLeave}
+                    >
+                        {/* <div className='main_img i6'> */}
+                        <div className={` ${activedark ? (activedark === 'i6' ? 'main_img activedark i6' : 'main_img gray i6') : 'main_img i6'}`}>
                             <div className="move">
                                 <img src={arrow2} alt="arrow" />
                                 <span>Youtube</span>
                             </div>
                         </div>
-                    </Link>
-                    <Link to="/gsap" className="main_img_wrap" onClick={(e) => LinkHandler(e)}>
-                        <div className="main_img i7">
+                    </div>
+                    <div
+                        className='main_img_wrap a7'
+                        // className={` ${activedark ? (activedark === 'i7' ? 'main_img_wrap activedark i7' : 'main_img_wrap gray i7') : 'main_img_wrap i7'}`}
+                        onClick={() => LinkHandler('i7')}
+                        onMouseEnter={() => handleHover('i7')}
+                        onMouseLeave={handleLeave}
+                    >
+                        {/* <div className='main_img i7'> */}
+                        <div className={` ${activedark ? (activedark === 'i7' ? 'main_img activedark i7' : 'main_img gray i7') : 'main_img i7'}`}>
                             <div className="move">
                                 <img src={arrow2} alt="arrow" />
                                 <span>GSAP</span>
                             </div>
                         </div>
-                    </Link>
-                    <Link to="/myuduck" className="main_img_wrap" onClick={(e) => LinkHandler(e)}>
-                        <div className="main_img i8">
+                    </div>
+                    <div
+                        className='main_img_wrap a8'
+                        // className={` ${activedark ? (activedark === 'i8' ? 'main_img_wrap activedark i8' : 'main_img_wrap gray i8') : 'main_img_wrap i8'}`}
+                        onClick={() => LinkHandler('i8')}
+                        onMouseEnter={() => handleHover('i8')}
+                        onMouseLeave={handleLeave}
+                    >
+                        {/* <div className='main_img i8'> */}
+                        <div className={` ${activedark ? (activedark === 'i8' ? 'main_img activedark i8' : 'main_img gray i8') : 'main_img i8'}`}>
                             <div className="move">
                                 <img src={arrow2} alt="arrow" />
                                 <span>Myuduck</span>
                             </div>
                         </div>
-                    </Link>
-                    <Link to="/mouse" className="main_img_wrap" onClick={(e) => LinkHandler(e)}>
-                        <div className="main_img i9">
+                    </div>
+                    <div
+                        className='main_img_wrap a9'
+                        // className={` ${activedark ? (activedark === 'i9' ? 'main_img_wrap activedark i9' : 'main_img_wrap gray i9') : 'main_img_wrap i9'}`}
+                        onClick={() => LinkHandler('i9')}
+                        onMouseEnter={() => handleHover('i9')}
+                        onMouseLeave={handleLeave}
+                    >
+                        {/* <div className='main_img i9'> */}
+                        <div className={` ${activedark ? (activedark === 'i9' ? 'main_img activedark i9' : 'main_img gray i9') : 'main_img i9'}`}>
                             <div className="move">
                                 <img src={arrow2} alt="arrow" />
                                 <span>Mouse</span>
                             </div>
                         </div>
-                    </Link>
-                    <Link to="/movie" className="main_img_wrap" onClick={(e) => LinkHandler(e)}>
-                        <div className="main_img i10">
+                    </div>
+                    <div
+                        className='main_img_wrap a10'
+                        // className={` ${activedark ? (activedark === 'i10' ? 'main_img_wrap activedark i10' : 'main_img_wrap gray i10') : 'main_img_wrap i10'}`}
+                        onClick={() => LinkHandler('i10')}
+                        onMouseEnter={() => handleHover('i10')}
+                        onMouseLeave={handleLeave}
+                    >
+                        {/* <div className='main_img i10'> */}
+                        <div className={` ${activedark ? (activedark === 'i10' ? 'main_img activedark i10' : 'main_img gray i10') : 'main_img i10'}`}>
                             <div className="move">
                                 <img src={arrow2} alt="arrow" />
                                 <span>Movie</span>
                             </div>
                         </div>
-                    </Link>
-                    <Link to="/slide" className="main_img_wrap" onClick={(e) => LinkHandler(e)}>
-                        <div className="main_img i11">
+                    </div>
+                    <div
+                        className='main_img_wrap a11'
+                        // className={` ${activedark ? (activedark === 'i11' ? 'main_img_wrap activedark i11' : 'main_img_wrap gray i11') : 'main_img_wrap i11'}`}
+                        onClick={() => LinkHandler('i11')}
+                        onMouseEnter={() => handleHover('i11')}
+                        onMouseLeave={handleLeave}
+                    >
+                        {/* <div className='main_img i11'> */}
+                        <div className={` ${activedark ? (activedark === 'i11' ? 'main_img activedark i11' : 'main_img gray i11') : 'main_img i11'}`}>
                             <div className="move">
                                 <img src={arrow2} alt="arrow" />
                                 <span>Slide</span>
                             </div>
                         </div>
-                    </Link>
-                    <Link to="/addplus" className="main_img_wrap" onClick={(e) => LinkHandler(e)}>
-                        <div className="main_img i12">
+                    </div>
+                    <div
+                        className='main_img_wrap a12'
+                        // className={` ${activedark ? (activedark === 'i12' ? 'main_img_wrap activedark i12' : 'main_img_wrap gray i12') : 'main_img_wrap i12'}`}
+                        onClick={() => LinkHandler('i12')}
+                        onMouseEnter={() => handleHover('i12')}
+                        onMouseLeave={handleLeave}
+                    >
+                        {/* <div className='main_img i12'> */}
+                        <div className={` ${activedark ? (activedark === 'i12' ? 'main_img activedark i12' : 'main_img gray i12') : 'main_img i12'}`}>
                             <div className="move">
                                 <img src={arrow2} alt="arrow" />
                                 <span>Add-Plus</span>
                             </div>
                         </div>
-                    </Link>
+                    </div>
                 </div>
             </div>
             {/* main_main */}

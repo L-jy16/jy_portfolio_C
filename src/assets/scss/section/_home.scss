@@ -123,9 +123,13 @@
                         height: 100%;
                         position: relative;
 
-                        // &.activedark {
-                        //     background-filter: brightness(0.4);
-                        // }
+                        &.activedark {
+                            filter: grayscale(0%)
+                        }
+    
+                        &.gray {
+                            filter: grayscale(100%)
+                        }
 
                         &.i1 {
                             width: 100%;
@@ -187,6 +191,8 @@
                     align-content: flex-end;
                     cursor: pointer;
 
+                    
+
                     &:hover {
                         .main_img {
 
@@ -226,6 +232,14 @@
                     .main_img {
                         width: 100%;
                         height: 100%;
+
+                        &.activedark {
+                            filter: grayscale(0%)
+                        }
+    
+                        &.gray {
+                            filter: grayscale(100%)
+                        }
 
                         &.i6 {
                             width: 100%;
