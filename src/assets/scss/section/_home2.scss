@@ -1,0 +1,315 @@
+#wrap {
+    height: 100vh;
+    text-align: center;
+    position: relative;
+
+    #main__title {
+        h2 {
+            text-transform: uppercase;
+            font-family: var(--mainEn-font);
+            font-size: 2vw;
+            font-weight: lighter;
+            padding-top: 25vh;
+        }
+
+        span {
+            display: inline-block;
+            margin-top: 1vh;
+            text-transform: uppercase;
+            font-family: var(--mainSub-font2);
+            font-size: 1vw;
+            letter-spacing: 1PX;
+        }
+    }
+
+    #main_main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+
+        #back_button {
+            display: none;
+        }
+
+        .text {
+            display: none;
+        }
+
+        .work_img_wrap {
+            margin: 2vw 0 1vw 0;
+            width: 30%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+
+            .main_img_wrap {
+                width: 4vw;
+                height: 4vw;
+                cursor: auto;
+                margin: 0.1vw;
+
+                .main_img {
+                    width: 100%;
+                    height: 100%;
+                    position: relative;
+
+                    .move {
+                        display: none;
+                    }
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background-color: var(--black700);
+
+                    }
+
+                    &.i0 {
+                        display: none;
+                    }
+
+                    &.i1 {
+                        background-image: url(../../image/nnsample.jpg);
+                        background-position: center;
+                        background-size: cover;
+                    }
+
+                    &.i2 {
+                        background-image: url(../../image/skillsample.jpg);
+                        background-position: center;
+                        background-size: cover;
+                    }
+
+                    &.i3 {
+                        background-image: url(../../image/aboutmesample.jpg);
+                        background-position: center;
+                        background-size: cover;
+                    }
+
+                    &.i4 {
+                        background-image: url(../../image/commsamle.jpg);
+                        background-position: center;
+                        background-size: cover;
+                    }
+
+                    &.i5 {
+                        background-image: url(../../image/nnsample2.jpg);
+                        background-position: center;
+                        background-size: cover;
+                    }
+
+                    &.i6 {
+                        background-image: url(../../image/youtube2.jpg);
+                        background-position: center;
+                        background-size: cover;
+                    }
+
+                    &.i7 {
+                        background-image: url(../../image/gsap.jpg);
+                        background-position: center;
+                        background-size: cover;
+                    }
+
+                    &.i8 {
+                        background-image: url(../../image/myuduck.jpg);
+                        background-position: center;
+                        background-size: cover;
+                    }
+
+                    &.i9 {
+                        background-image: url(../../image/mouse.jpg);
+                        background-position: center;
+                        background-size: cover;
+                    }
+
+                    &.i10 {
+                        background-image: url(../../image/movie.jpg);
+                        background-position: center;
+                        background-size: cover;
+                    }
+
+                    &.i11 {
+                        background-image: url(../../image/slide.jpg);
+                        background-position: center;
+                        background-size: cover;
+                    }
+
+                    &.i12 {
+                        background-image: url(../../image/addplus.jpg);
+                        background-position: center;
+                        background-size: cover;
+                    }
+
+                }
+            }
+        }
+
+
+        &.active {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            #back_button {
+                position: absolute;
+                top: 0;
+                left: 0;
+                text-align: left;
+                padding: 2vw;
+                display: flex;
+                align-items: center;
+                align-content: center;
+                cursor: pointer;
+
+                img {
+                    width: 2vw;
+                    transform: rotate(180deg);
+                    margin-top: -0.3vw;
+                }
+
+                .BackButton {
+                    font-size: 1vw;
+                    font-family: var(--mainEn-font);
+                    color: var(--white200);
+                    margin-left: 1vw;
+                    text-transform: uppercase;
+                }
+            }
+
+            .text {
+                display: block;
+                text-align: center;
+                margin-top: 1vw;
+
+                .center_text {
+                    text-transform: uppercase;
+                    font-family: var(--mainEn-font);
+                    font-size: 10vw;
+                    line-height: 1;
+
+                    p {
+                        font-weight: lighter;
+                        display: inline-block;
+                    }
+                }
+
+            }
+
+            .work_img_wrap {
+                position: absolute;
+                top: 0;
+                left: 0;
+                margin: 0;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-content: space-between;
+                align-items: center;
+
+                .main_img_wrap {
+                    width: 13vw;
+                    height: 35%;
+                    cursor: pointer;
+
+                    .main_img {
+                        width: 100%;
+                        height: 100%;
+                        position: relative;
+
+                        &.i1 {
+                            width: 100%;
+                            height: 70%;
+                        }
+
+                        &.i2 {
+                            width: 100%;
+                            height: 80%;
+                        }
+
+                        &.i3 {
+                            width: 100%;
+                            height: 60%;
+                        }
+
+                        &.i4 {
+                            width: 100%;
+                            height: 40%;
+                        }
+
+                        &.i5 {
+                            width: 100%;
+                            height: 90%;
+                        }
+
+                        &.i6 {
+                            width: 100%;
+                            height: 70%;
+                        }
+
+                        &.i7 {
+                            width: 100%;
+                            height: 50%;
+                        }
+
+                        &.i8 {
+                            width: 100%;
+                            height: 60%;
+                        }
+
+                        &.i9 {
+                            width: 100%;
+                            height: 90%;
+                        }
+
+                        &.i10 {
+                            width: 100%;
+                            height: 65%;
+                        }
+
+                        &.i11 {
+                            width: 100%;
+                            height: 40%;
+                        }
+
+                        &.i12 {
+                            width: 100%;
+                            height: 70%;
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+
+    #start_button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+
+        .StartButton {
+            font-size: 1vw;
+            font-family: var(--mainEn-font);
+            color: var(--white200);
+            margin-right: 1vw;
+            text-transform: uppercase;
+        }
+
+        img {
+            width: 2vw;
+            margin-top: -0.3vw;
+        }
+
+        &.active {
+            display: none;
+        }
+    }
+}
