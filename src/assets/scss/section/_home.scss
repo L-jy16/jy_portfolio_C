@@ -75,7 +75,7 @@
             .up {
                 margin: 0;
                 width: 70%;
-                height: 35%;
+                height: 40%;
 
                 .main_img_wrap {
                     width: 13vw;
@@ -94,6 +94,8 @@
                                 text-align: left;
                                 padding: 1vw;
                                 position: relative;
+                                background-color: #00000067;
+                                filter: blur(9);
 
                                 img {
                                     border: 1px solid var(--font-color);
@@ -102,7 +104,7 @@
                                     height: 2.5vw;
                                     padding: 0.5vw;
                                     position: absolute;
-                                    top: 2.5vw;
+                                    top: 1.8vw;
                                     right: 1vw;
                                 }
 
@@ -126,7 +128,7 @@
                         &.activedark {
                             filter: grayscale(0%)
                         }
-    
+
                         &.gray {
                             filter: grayscale(100%)
                         }
@@ -138,7 +140,7 @@
 
                         &.i2 {
                             width: 100%;
-                            height: 80%;
+                            height: 100%;
                         }
 
                         &.i3 {
@@ -148,12 +150,12 @@
 
                         &.i4 {
                             width: 100%;
-                            height: 40%;
+                            height: 70%;
                         }
 
                         &.i5 {
                             width: 100%;
-                            height: 90%;
+                            height: 100%;
                         }
                     }
                 }
@@ -191,7 +193,7 @@
                     align-content: flex-end;
                     cursor: pointer;
 
-                    
+
 
                     &:hover {
                         .main_img {
@@ -207,6 +209,8 @@
                                 width: 100%;
                                 left: 0;
                                 bottom: 0;
+                                background-color: #00000067;
+                                filter: blur(9);
 
                                 img {
                                     border: 1px solid var(--font-color);
@@ -215,7 +219,7 @@
                                     height: 2.5vw;
                                     padding: 0.5vw;
                                     position: absolute;
-                                    bottom: 2.5vw;
+                                    bottom: 1.8vw;
                                     right: 1vw;
                                 }
 
@@ -236,44 +240,44 @@
                         &.activedark {
                             filter: grayscale(0%)
                         }
-    
+
                         &.gray {
                             filter: grayscale(100%)
                         }
 
                         &.i6 {
                             width: 100%;
-                            height: 70%;
+                            height: 100%;
                         }
 
                         &.i7 {
                             width: 100%;
-                            height: 50%;
+                            height: 70%;
                         }
 
                         &.i8 {
                             width: 100%;
-                            height: 60%;
+                            height: 80%;
                         }
 
                         &.i9 {
                             width: 100%;
-                            height: 90%;
+                            height: 100%;
                         }
 
                         &.i10 {
                             width: 100%;
-                            height: 65%;
+                            height: 80%;
                         }
 
                         &.i11 {
                             width: 100%;
-                            height: 40%;
+                            height: 60%;
                         }
 
                         &.i12 {
                             width: 100%;
-                            height: 70%;
+                            height: 100%;
                         }
                     }
                 }
@@ -297,7 +301,10 @@
                 .main_img {
                     width: 100%;
                     height: 100%;
+                    will-change: transform, opacity;
+                    background-color: #fff;
                     position: relative;
+
 
                     .move {
                         display: none;
@@ -315,31 +322,31 @@
                     }
 
                     &.i1 {
-                        background-image: url(../../image/nnsample.jpg);
+                        background-image: url(../../image/i1-min.png);
                         background-position: center;
                         background-size: cover;
                     }
 
                     &.i2 {
-                        background-image: url(../../image/skillsample.jpg);
+                        background-image: url(../../image/i2-min.png);
                         background-position: center;
                         background-size: cover;
                     }
 
                     &.i3 {
-                        background-image: url(../../image/aboutmesample.jpg);
+                        background-image: url(../../image/i3-min.png);
                         background-position: center;
                         background-size: cover;
                     }
 
                     &.i4 {
-                        background-image: url(../../image/commsamle.jpg);
+                        background-image: url(../../image/i4-min.png);
                         background-position: center;
                         background-size: cover;
                     }
 
                     &.i5 {
-                        background-image: url(../../image/nnsample2.jpg);
+                        background-image: url(../../image/i5-min.png);
                         background-position: center;
                         background-size: cover;
                     }
@@ -369,7 +376,9 @@
                 .main_img {
                     width: 100%;
                     height: 100%;
+                    will-change: transform, opacity;
                     position: relative;
+                    background-color: #fff;
 
                     .move {
                         display: none;
@@ -387,43 +396,43 @@
                     }
 
                     &.i6 {
-                        background-image: url(../../image/youtube2.jpg);
+                        background-image: url(../../image/i6-min.png);
                         background-position: center;
                         background-size: cover;
                     }
 
                     &.i7 {
-                        background-image: url(../../image/gsap.jpg);
+                        background-image: url(../../image/i7-min.png);
                         background-position: center;
                         background-size: cover;
                     }
 
                     &.i8 {
-                        background-image: url(../../image/myuduck.jpg);
+                        background-image: url(../../image/i8-min.png);
                         background-position: center;
                         background-size: cover;
                     }
 
                     &.i9 {
-                        background-image: url(../../image/mouse.jpg);
+                        background-image: url(../../image/i9-min.png);
                         background-position: center;
                         background-size: cover;
                     }
 
                     &.i10 {
-                        background-image: url(../../image/movie.jpg);
+                        background-image: url(../../image/i10-min.png);
                         background-position: center;
                         background-size: cover;
                     }
 
                     &.i11 {
-                        background-image: url(../../image/slide.jpg);
+                        background-image: url(../../image/i11-min.png);
                         background-position: center;
                         background-size: cover;
                     }
 
                     &.i12 {
-                        background-image: url(../../image/addplus.jpg);
+                        background-image: url(../../image/i12-min.png);
                         background-position: center;
                         background-size: cover;
                     }

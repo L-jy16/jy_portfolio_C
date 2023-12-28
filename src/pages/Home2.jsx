@@ -4,7 +4,7 @@ import { Flip } from 'gsap/Flip';
 
 import arrow from '../assets/image/arrow.svg'
 import arrow2 from '../assets/image/arrow2.svg'
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 gsap.registerPlugin(Flip);
 
@@ -57,7 +57,12 @@ const Home2 = () => {
     };
 
     const LinkHandler = (e) => {
-        setMove(e)
+        if (!enter) {
+            setMove("")
+            console.log('지금은 넘어갈 수 없다!');
+        } else {
+            setMove(e)
+        }
     }
 
     useEffect(() => {
@@ -65,6 +70,7 @@ const Home2 = () => {
         switch (move) {
             case "i2":
                 tl.to(".center, #main__title", { opacity: 0, duration: 0.41 })
+                tl.to("#back_button", { opacity: 0, duration: 0.41 })
                 tl.to(".i1", { opacity: 0, duration: 0.41 })
                 tl.to(".i3", { opacity: 0, duration: 0.41 })
                 tl.to(".i4", { opacity: 0, duration: 0.41 })
@@ -76,11 +82,100 @@ const Home2 = () => {
                 tl.to(".i10", { opacity: 0, duration: 0.41 })
                 tl.to(".i11", { opacity: 0, duration: 0.41 })
                 tl.to(".i12", { opacity: 0, duration: 0.41 })
-                tl.to(".a2", { xPercent: "40%", yPercent: "30vh", height: "70vh", width: "60%" })
-                // .add(() => navgaite("/skill")); 
+                tl.to(".a2", { xPercent: 80, yPercent: 70, height: "70vh", width: "100%" })
+                    .add(() => navgaite("/skill"));
+                // navgaite("/skill")
                 break;
+            case "i3":
+                tl.to(".center, #main__title", { opacity: 0, duration: 0.41 })
+                tl.to("#back_button", { opacity: 0, duration: 0.41 })
+                tl.to(".i1", { opacity: 0, duration: 0.41 })
+                tl.to(".i2", { opacity: 0, duration: 0.41 })
+                tl.to(".i4", { opacity: 0, duration: 0.41 })
+                tl.to(".i5", { opacity: 0, duration: 0.41 })
+                tl.to(".i6", { opacity: 0, duration: 0.41 })
+                tl.to(".i7", { opacity: 0, duration: 0.41 })
+                tl.to(".i8", { opacity: 0, duration: 0.41 })
+                tl.to(".i9", { opacity: 0, duration: 0.41 })
+                tl.to(".i10", { opacity: 0, duration: 0.41 })
+                tl.to(".i11", { opacity: 0, duration: 0.41 })
+                tl.to(".i12", { opacity: 0, duration: 0.41 })
+                tl.to(".a3", { xPercent: -70, yPercent: 0, height: "70vh", width: "100%" })
+                    .add(() => navgaite("/aboutme"));
+                // navgaite("/aboutme")
+                break;
+            case "i4":
+                tl.to(".center, #main__title", { opacity: 0, duration: 0.41 })
+                tl.to("#back_button", { opacity: 0, duration: 0.41 })
+                tl.to(".i1", { opacity: 0, duration: 0.41 })
+                tl.to(".i2", { opacity: 0, duration: 0.41 })
+                tl.to(".i3", { opacity: 0, duration: 0.41 })
+                tl.to(".i5", { opacity: 0, duration: 0.41 })
+                tl.to(".i6", { opacity: 0, duration: 0.41 })
+                tl.to(".i7", { opacity: 0, duration: 0.41 })
+                tl.to(".i8", { opacity: 0, duration: 0.41 })
+                tl.to(".i9", { opacity: 0, duration: 0.41 })
+                tl.to(".i10", { opacity: 0, duration: 0.41 })
+                tl.to(".i11", { opacity: 0, duration: 0.41 })
+                tl.to(".i12", { opacity: 0, duration: 0.41 })
+                tl.to(".a4", { xPercent: 80, yPercent: 40, height: "70vh", width: "100%" })
+                    .add(() => navgaite("/content"));
+                // navgaite("/content")
+                break;
+            case "i6":
+                tl.to(".center, #main__title", { opacity: 0, duration: 0.41 })
+                tl.to("#back_button", { opacity: 0, duration: 0.41 })
+                tl.to(".i1", { opacity: 0, duration: 0.41 })
+                tl.to(".i2", { opacity: 0, duration: 0.41 })
+                tl.to(".i3", { opacity: 0, duration: 0.41 })
+                tl.to(".i4", { opacity: 0, duration: 0.41 })
+                tl.to(".i5", { opacity: 0, duration: 0.41 })
+                tl.to(".i7", { opacity: 0, duration: 0.41 })
+                tl.to(".i8", { opacity: 0, duration: 0.41 })
+                tl.to(".i9", { opacity: 0, duration: 0.41 })
+                tl.to(".i10", { opacity: 0, duration: 0.41 })
+                tl.to(".i11", { opacity: 0, duration: 0.41 })
+                tl.to(".i12", { opacity: 0, duration: 0.41 })
+                tl.to(".a6", { xPercent: 0, yPercent: -40, height: "70vh", width: "100%" })
+                    .add(() => navgaite("/youtube"));
+                // navgaite("/youtube")
+                break;
+            case "i7":
+                tl.to(".center, #main__title", { opacity: 0, duration: 0.41 })
+                tl.to("#back_button", { opacity: 0, duration: 0.41 })
+                tl.to(".i1", { opacity: 0, duration: 0.41 })
+                tl.to(".i2", { opacity: 0, duration: 0.41 })
+                tl.to(".i3", { opacity: 0, duration: 0.41 })
+                tl.to(".i4", { opacity: 0, duration: 0.41 })
+                tl.to(".i5", { opacity: 0, duration: 0.41 })
+                tl.to(".i6", { opacity: 0, duration: 0.41 })
+                tl.to(".i8", { opacity: 0, duration: 0.41 })
+                tl.to(".i9", { opacity: 0, duration: 0.41 })
+                tl.to(".i10", { opacity: 0, duration: 0.41 })
+                tl.to(".i11", { opacity: 0, duration: 0.41 })
+                tl.to(".i12", { opacity: 0, duration: 0.41 })
+                tl.to(".a7", { xPercent: 80, yPercent: -70, height: "70vh", width: "100%" })
+                    .add(() => navgaite("/gsap"));
+                // navgaite("/gsap")
+                break;
+            case "i8":
+                navgaite("/myuduck")
+                break;
+            case "i9":
+                navgaite("/mouse")
+                break;
+            case "i10":
+                navgaite("/movie")
+                break;
+            case "i11":
+                navgaite("/slide")
+                break;
+            case "i12":
+                navgaite("/addplus")
+                break;
+            default:
         }
-    }, [])
+    }, [move, navgaite])
 
 
     return (
