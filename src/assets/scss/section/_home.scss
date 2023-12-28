@@ -9,7 +9,8 @@
             font-family: var(--mainEn-font);
             font-size: 2vw;
             font-weight: lighter;
-            padding-top: 25vh;
+            padding-top: 27vh;
+            line-height: 1;
         }
 
         span {
@@ -19,6 +20,7 @@
             font-family: var(--mainSub-font2);
             font-size: 1vw;
             letter-spacing: 1PX;
+            line-height: 1;
         }
     }
 
@@ -52,13 +54,6 @@
                 align-items: center;
                 align-content: center;
                 cursor: pointer;
-
-                img {
-                    color: var(--font-color);
-                    width: 2vw;
-                    transform: rotate(180deg);
-                    margin-top: -0.3vw;
-                }
 
                 .BackButton {
                     font-size: 1vw;
@@ -468,6 +463,165 @@
 
         &.active {
             display: none;
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    #wrap {
+        #main__title {
+            h2 {
+                font-size: 5vw;
+                padding-top: 8vh;
+            }
+
+            span {
+                font-size: 2.5vw;
+            }
+        }
+
+        #main_main {
+            #back_button {
+                display: none;
+            }
+
+            &.active {
+                justify-content: flex-start;
+                
+                #back_button {
+                    .BackButton {
+                        font-size: 3vw;
+                    }
+                }
+
+                .up {
+                    width: 90%;
+                    margin-top: 23vh;
+                    height: 20%;
+
+                    .main_img_wrap {
+                        width: 49%;
+                        height: 6vh;
+
+                        &:hover {
+                            .main_img {
+                                .move {
+                                    img {
+                                       display: none;
+                                    }
+
+                                    span {
+                                        font-size: 3vw;
+                                    }
+                                }
+                            }
+                        }
+
+                        .main_img {
+
+                            &.i1,
+                            &.i2,
+                            &.i3,
+                            &.i4,
+                            &.i5 {
+                                height: 100%;
+                            }
+                        }
+                    }
+                }
+
+                .center {
+                    position: absolute;
+                    top: 16vh;
+                    
+                    .center_text {
+                        p {}
+                    }
+                }
+
+                .down {
+                    width: 90%;
+                    height: 20%;
+
+
+                    .main_img_wrap {
+                        width: 49%;
+                        height: 6vh;
+
+                        &:hover {
+                            .main_img {
+                                .move {
+                                    img {
+                                       display: none;
+                                    }
+
+                                    span {
+                                        font-size: 3vw;
+                                    }
+                                }
+                            }
+                        }
+                        .main_img {
+
+                            &.i6,
+                            &.i7,
+                            &.i8,
+                            &.i9,
+                            &.i10,
+                            &.i11,
+                            &.i12 {
+                                height: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .up {
+                margin: 5vw 0 1vw 0;
+                width: 80%;
+                flex-wrap: wrap;
+
+                .main_img_wrap {
+                    width: 49%;
+                    height: 7vw;
+                    margin-bottom: 1vw;
+
+                    &:last-child {
+                        width: 100%;
+                    }
+                }
+            }
+
+            .center {
+                display: none;
+            }
+
+            .down {
+                margin: -1vw 0 1vw 0;
+                width: 80%;
+                flex-wrap: wrap;
+
+                .main_img_wrap {
+                    width: 49%;
+                    height: 7vw;
+                    margin-bottom: 1vw;
+
+                    &:first-child {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        #start_button {
+            .StartButton {
+                font-size: 3vw;
+            }
+
+            img {
+                width: 5vw;
+            }
         }
     }
 }

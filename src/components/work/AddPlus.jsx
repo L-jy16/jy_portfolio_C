@@ -24,14 +24,14 @@ const AddPlus = () => {
     // 화면 전환 효과
     useEffect(() => {
 
-        gsap.set(".work_img", { opacity: 0, y: "-100%" });
+        gsap.set(".work_img", { opacity: 0, x: "100%", y: "-100%" });
         gsap.set(".work__title, .center_text, .circle_wrap, .desc, .work_back_button", { opacity: 0 });
 
         setTimeout(() => {
             const tl = gsap.timeline();
 
 
-            tl.to(".work_img", { opacity: 1, y: 0, duration: 0.41 })
+            tl.to(".work_img", { opacity: 1, x:0, y: 0, duration: 0.41 })
             tl.to(".work__title", { opacity: 1, duration: 0.41 })
             tl.to(".center_text", { opacity: 1, duration: 0.41 })
             tl.to(".desc", { opacity: 1, duration: 0.41 })
