@@ -1,13 +1,20 @@
-import React, { useEffect, useRef, useState } from 'react'
-import { Link } from 'react-router-dom'
+import React, { useEffect,  useState } from 'react'
+import { Link, useNavigate  } from 'react-router-dom'
 import { gsap } from "gsap";
-import SplitType from 'split-type';
 
 import arrow2 from '../../assets/image/arrow2.svg'
 
 const AboutMe = () => {
     const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
     // const backbtn = "true" ;
+    // const [backbtn, setBacbtn] = useState("") ;
+    const navigate = useNavigate();
+
+    // back_btn
+    const backhandle = () => {
+        // setBacbtn("true");
+        navigate('/true');
+    }
 
     // 마우스 커서
     const handleMouseMove = (e) => {
@@ -41,41 +48,6 @@ const AboutMe = () => {
         })
     }, [])
 
-    // text 회전
-    const circleRef = useRef(null);
-
-    useEffect(() => {
-        const circle = circleRef.current;
-
-        circle.addEventListener("mouseover", () => {
-            const target = gsap.utils.toArray(".split");
-            target.forEach(target => {
-                let splitClient = new SplitType(target, { type: "char" })
-                let chars = splitClient.chars;
-
-                gsap.from(chars, {
-                    xPercent: "200",
-                    rotationY: "+=180",
-                    transformOrigin: "center center"
-                })
-            })
-        })
-
-        circle.addEventListener("mouseout", () => {
-            const target = gsap.utils.toArray(".split");
-            target.forEach(target => {
-                let splitClient = new SplitType(target, { type: "char" })
-                let chars = splitClient.chars;
-
-                gsap.from(chars, {
-                    xPercent: "-200",
-                    rotationY: "+=180",
-                    transformOrigin: "center center"
-                })
-            })
-        })
-    }, [circleRef])
-
     return (
         <div className='work_Detail'>
             <div className="mouse__cursor" style={{ left: cursorPosition.x, top: cursorPosition.y }}></div>
@@ -90,7 +62,7 @@ const AboutMe = () => {
                 <div className="work_img_wrap">
                     <div className='work_img aboutme'></div>
                     <div className="circle_wrap">
-                        <div className='circle' ref={circleRef}></div>
+                        <div className='circle'></div>
                     </div>
                 </div>
                 <div className="desc">
@@ -103,7 +75,7 @@ const AboutMe = () => {
             </div>
             {/* work_center */}
 
-            <Link to="/" className="work_back_button">
+            <Link to='/true' className="work_back_button" onClick={() => backhandle()}>
                 <span>Main site</span>
                 <img src={arrow2} alt="arrow" />
             </Link>

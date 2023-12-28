@@ -4,16 +4,20 @@ import { Flip } from 'gsap/Flip';
 
 import arrow from '../assets/image/arrow.svg'
 import arrow2 from '../assets/image/arrow2.svg'
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 
-gsap.registerPlugin(Flip);
+
 
 const Home2 = () => {
-    const [enter, setEnter] = useState("true");
+    const { backbtn } = useParams();
+    const [enter, setEnter] = useState("" || backbtn);
     const [activedark, setAactivedark] = useState("");
     const [move, setMove] = useState("")
 
     const navgaite = useNavigate();
+    // console.log(backbtn);
+    
+
 
     const activeHandle = () => {
         setEnter(true);
@@ -67,6 +71,7 @@ const Home2 = () => {
             setEnter(true);
 
         }
+
     }
 
     useEffect(() => {
@@ -254,6 +259,7 @@ const Home2 = () => {
                 break;
             default:
         }
+        
     }, [move, navgaite])
 
 

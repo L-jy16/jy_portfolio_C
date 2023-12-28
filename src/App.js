@@ -21,6 +21,7 @@ const App = () => {
       <Main>
         <Routes>
           <Route path='/' element={<Home2 />}></Route>
+          <Route path='/:backbtn' element={<Home2 />}></Route>
           <Route path='/skill' element={<Skill />}></Route>
           <Route path='/aboutme' element={<AboutMe />}></Route>
           <Route path='/content' element={<Content />}></Route>
