@@ -12,37 +12,31 @@ const Home2 = () => {
 
     const navgaite = useNavigate();
 
+    const animationConfig = {
+        opacity: 0,
+        scale: 0,
+        stagger: {
+            amount: 0.2,
+            grid: 'auto',
+            from: 'end',
+        },
+        duration: 0.3,
+        ease: 'power4.inOut',
+    };
+
+    useEffect(() => {
+        gsap.from('.main_img_wrap', animationConfig);
+
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [])
+
     const activeHandle = () => {
         setEnter(true);
-        const animationConfig = {
-            opacity: 0,
-            scale: 0,
-            stagger: {
-                amount: 0.2,
-                grid: 'auto',
-                from: 'end',
-            },
-            duration: 0.3,
-            ease: 'power4.inOut',
-        };
-
         gsap.from('.main_img_wrap', animationConfig);
     };
 
     const BackHandle = () => {
         setEnter(false);
-        const animationConfig = {
-            opacity: 0,
-            scale: 0,
-            stagger: {
-                amount: 0.2,
-                grid: 'auto',
-                from: 'end',
-            },
-            duration: 0.3,
-            ease: 'power4.inOut',
-        };
-
         gsap.from('.main_img_wrap', animationConfig);
     };
 
@@ -63,6 +57,17 @@ const Home2 = () => {
             setMove(e)
             setEnter(true);
 
+            const selectedLink = document.querySelector(`.main_img.${e}`);
+            if (selectedLink) {
+                selectedLink.classList.add('activedark');
+            }
+
+            const allLinks = document.querySelectorAll('.main_img');
+            allLinks.forEach((link) => {
+                if (link !== selectedLink) {
+                    link.classList.add('gray');
+                }
+            });
         }
 
     }

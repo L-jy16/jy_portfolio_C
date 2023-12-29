@@ -1,37 +1,18 @@
 import React, { useEffect, useState } from 'react';
 import { gsap } from 'gsap';
 
-import arrow from '../assets/image/arrow.svg'
 import arrow2 from '../assets/image/arrow2.svg'
 import { useNavigate } from 'react-router-dom';
 
 
 
 const Homeactive = () => {
-    const [enter, setEnter] = useState(true);
     const [activedark, setAactivedark] = useState("");
     const [move, setMove] = useState("")
 
     const navgaite = useNavigate();
 
-    // if (setEnter) {
-    //     const animationConfig = {
-    //         opacity: 0,
-    //         scale: 0,
-    //         stagger: {
-    //             amount: 0.2,
-    //             grid: 'auto',
-    //             from: 'end',
-    //         },
-    //         duration: 0.3,
-    //         ease: 'power4.inOut',
-    //     };
-
-    //     gsap.from('.main_img_wrap', animationConfig);
-    // }
-
-    const activeHandle = () => {
-        setEnter(true);
+    useEffect(() => {
         const animationConfig = {
             opacity: 0,
             scale: 0,
@@ -43,25 +24,11 @@ const Homeactive = () => {
             duration: 0.3,
             ease: 'power4.inOut',
         };
-
         gsap.from('.main_img_wrap', animationConfig);
-    };
+    }, [])
 
     const BackHandle = () => {
-        setEnter(false);
-        const animationConfig = {
-            opacity: 0,
-            scale: 0,
-            stagger: {
-                amount: 0.2,
-                grid: 'auto',
-                from: 'end',
-            },
-            duration: 0.3,
-            ease: 'power4.inOut',
-        };
-
-        gsap.from('.main_img_wrap', animationConfig);
+        navgaite("/");
     };
 
     const handleHover = (index) => {
@@ -73,16 +40,7 @@ const Homeactive = () => {
     };
 
     const LinkHandler = (e) => {
-        if (!enter) {
-            setMove("")
-            console.log('지금은 넘어갈 수 없다!');
-        } else {
-            console.log(e)
-            setMove(e)
-            setEnter(true);
-
-        }
-
+        setMove(e)
     }
 
     useEffect(() => {
@@ -282,7 +240,7 @@ const Homeactive = () => {
             </div>
             {/* main__title */}
 
-            <div id="main_main" className={enter ? "active" : ""}>
+            <div id="main_main" className="active">
                 <div id="back_button" onClick={() => BackHandle()}>
                     <span className="BackButton">back</span>
                 </div>
@@ -476,13 +434,6 @@ const Homeactive = () => {
                 </div>
             </div>
             {/* main_main */}
-
-            <div id="start_button" onClick={() => activeHandle()} className={enter ? "active" : ""}>
-                <span className="StartButton">enter</span>
-                <img src={arrow} alt="버튼" />
-            </div>
-            {/* start_button */}
-
         </div >
     )
 }
