@@ -1,4 +1,4 @@
-import React, { useEffect,  useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { gsap } from "gsap";
 
@@ -23,7 +23,7 @@ const Slide = () => {
     // 화면 전환 효과
     useEffect(() => {
 
-        gsap.set(".work_img", { opacity: 0, x: "-100%", y:"-100%" });
+        gsap.set(".work_img", { opacity: 0, x: "-100%", y: "-100%" });
         gsap.set(".work__title, .center_text, .circle_wrap, .desc, .work_back_button", { opacity: 0 });
 
         setTimeout(() => {
@@ -70,7 +70,7 @@ const Slide = () => {
             </div>
             {/* work_center */}
 
-            <Link to="/" className="work_back_button">
+            <Link to="/home" className="work_back_button">
                 <span>Main site</span>
                 <img src={arrow2} alt="arrow" />
             </Link>

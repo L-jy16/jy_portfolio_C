@@ -29,13 +29,13 @@
             font-family: var(--mainEn-font);
             font-size: 2vw;
             font-weight: lighter;
-            margin-top: 7vh;
+            margin-top: 3vw;
             line-height: 1;
         }
 
         span {
             display: inline-block;
-            margin: 1vh 0;
+            margin: 1vw 0;
             text-transform: uppercase;
             font-family: var(--mainSub-font2);
             font-size: 1vw;
@@ -55,7 +55,7 @@
 
             .center_text {
                 position: absolute;
-                top: 22vh;
+                top: 10vw;
                 left: 35%;
                 text-transform: uppercase;
                 font-family: var(--mainEn-font);
@@ -75,7 +75,7 @@
                 flex-wrap: wrap;
                 flex-direction: column;
                 align-content: flex-end;
-                z-index: -1;
+
 
                 .work_img {
                     position: absolute;
@@ -106,12 +106,12 @@
                     align-items: flex-end;
                     align-content: flex-end;
                     justify-content: center;
-                    margin-bottom: 1vh;
+                    margin-bottom: 1vw;
                     margin-right: 4vw;
 
                     .circle {
-                        width: 350px;
-                        height: 350px;
+                        width: 300px;
+                        height: 300px;
                         border: 1px solid var(--font-color);
                         border-radius: 50%;
                         transition: all 0.3s ease-in-out;
@@ -129,6 +129,7 @@
                 width: 40%;
                 font-family: var(--mainKo-font);
                 font-size: 1vw;
+                margin-left: 18vw;
 
                 span {
                     width: 100%;
@@ -162,7 +163,7 @@
 
             .center_text {
                 position: absolute;
-                top: 22vh;
+                top: 10vw;
                 right: 25%;
                 text-transform: uppercase;
                 font-family: var(--mainEn-font);
@@ -183,7 +184,7 @@
                 flex-wrap: wrap;
                 flex-direction: column-reverse;
                 align-content: flex-start;
-                z-index: -1;
+
 
 
                 .work_img {
@@ -209,13 +210,13 @@
                 }
 
                 .circle_wrap {
-                    width: 35%;
+                    width: 30%;
                     height: 100%;
                     display: flex;
                     align-items: flex-end;
                     align-content: flex-end;
                     justify-content: center;
-                    margin-bottom: 1vh;
+                    margin-bottom: 1vw;
                     margin-right: 4vw;
 
                     .circle {
@@ -236,7 +237,7 @@
             .desc {
                 width: 40%;
                 font-family: var(--mainKo-font);
-                margin-left: 0vw;
+                margin-right: 18vw;
                 font-size: 1vw;
 
                 span {
@@ -272,7 +273,7 @@
 
             .center_text {
                 position: absolute;
-                top: 1.5vh;
+                top: 1vw;
                 left: 30%;
                 text-transform: uppercase;
                 font-family: var(--mainEn-font);
@@ -288,17 +289,21 @@
 
             .work_img_wrap {
                 width: 100%;
-                height: 50vh;
+                // height: 50vh;
+                height: 60%;
                 display: flex;
                 flex-wrap: wrap;
                 flex-direction: row;
                 justify-content: space-between;
+                // justify-content: flex-start;
                 align-items: center;
-                z-index: -1;
+
 
                 .work_img {
+                    // margin-top: 5vw;
                     width: 65%;
                     height: 90%;
+                    z-index: -1;
 
                     &.youtube {
                         background-image: url(../../image/i6-min.png);
@@ -314,13 +319,13 @@
                 }
 
                 .circle_wrap {
-                    width: 35%;
+                    width: 30%;
                     height: 100%;
                     display: flex;
                     align-items: flex-end;
                     align-content: flex-end;
                     justify-content: center;
-                    margin-top: 11vh;
+                    margin-top: 5vw;
                     margin-right: 0;
 
                     .circle {
@@ -341,7 +346,8 @@
             .desc {
                 width: 40%;
                 font-family: var(--mainKo-font);
-                margin-top: 5vh;
+                margin-top: 5vw;
+                margin-left: 18vw;
                 font-size: 1vw;
 
                 span {
@@ -376,7 +382,7 @@
 
             .center_text {
                 position: absolute;
-                top: 22vh;
+                top: 10vw;
                 left: 25%;
                 text-transform: uppercase;
                 font-family: var(--mainEn-font);
@@ -422,13 +428,13 @@
                 }
 
                 .circle_wrap {
-                    width: 35%;
+                    width: 30%;
                     height: 100%;
                     display: flex;
                     align-items: flex-end;
                     align-content: flex-end;
                     justify-content: center;
-                    margin-bottom: 1vh;
+                    margin-bottom: 1vw;
                     margin-right: 4vw;
 
                     .circle {
@@ -450,7 +456,7 @@
             .desc {
                 width: 40%;
                 font-family: var(--mainKo-font);
-                margin-left: -10vw;
+                margin-right: 18vw;
                 font-size: 1vw;
 
                 span {
@@ -486,7 +492,7 @@
 
             .center_text {
                 position: absolute;
-                top: 1.5vh;
+                top: 1vw;
                 left: 15%;
                 text-transform: uppercase;
                 font-family: var(--mainEn-font);
@@ -502,17 +508,18 @@
 
             .work_img_wrap {
                 width: 100%;
-                height: 50vh;
+                // height: 50vh;
+                height: 60%;
                 display: flex;
                 flex-wrap: wrap;
                 flex-direction: row-reverse;
                 justify-content: space-between;
                 align-items: center;
-                z-index: -1;
 
                 .work_img {
                     width: 65%;
                     height: 90%;
+                    z-index: -1;
 
                     &.content {
                         background-image: url(../../image/i4-min.png);
@@ -528,13 +535,13 @@
                 }
 
                 .circle_wrap {
-                    width: 35%;
+                    width: 30%;
                     height: 100%;
                     display: flex;
                     align-items: flex-end;
                     align-content: flex-end;
                     justify-content: center;
-                    margin-top: 11vh;
+                    margin-top: 5vw;
                     margin-right: 0vw;
 
                     .circle {
@@ -556,8 +563,9 @@
             .desc {
                 width: 40%;
                 font-family: var(--mainKo-font);
+                margin-top: 5vw;
                 font-size: 1vw;
-                margin-top: 5vh;
+                margin-right: 18vw;
 
                 span {
                     width: 100%;
@@ -633,13 +641,13 @@
                 .center_text {
                     font-size: 11vw;
                     left: 30%;
+                    top: 12.5vw;
                 }
 
                 .work_img_wrap {
 
                     .circle_wrap {
                         width: 40%;
-                        margin-top: -5%;
 
                         .circle {
                             width: 25vw;
@@ -652,13 +660,12 @@
 
                 .desc {
                     width: 45%;
-                    font-size: 1.2vw;
-                    margin-left: 18vw;
-
-                    span {}
+                    font-size: 1.3vw;
+                    margin-left: 0vw;
+                    margin-right: 3vw;
 
                     .work_btn {
-                        a {}
+                        margin-top: 1.2vw;
                     }
 
                 }
@@ -668,12 +675,12 @@
             &.top_r {
                 .center_text {
                     font-size: 11vw;
+                    top: 12.5vw;
                 }
 
                 .work_img_wrap {
                     .circle_wrap {
                         width: 40%;
-                        margin-top: -5%;
 
                         .circle {
                             width: 25vw;
@@ -685,7 +692,12 @@
 
                 .desc {
                     width: 45%;
-                    font-size: 1.2vw;
+                    font-size: 1.3vw;
+                    margin-right: 10vw;
+
+                    .work_btn {
+                        margin-top: 1.2vw;
+                    }
 
                 }
             }
@@ -694,19 +706,20 @@
             &.left {
                 .center_text {
                     font-size: 11vw;
-                    // left: 30%;
+                    left: 25%;
                 }
 
                 .work_img_wrap {
-                    height: 50vh;
+                    .work_img {
+                        width: 60%;
+                    }
 
                     .circle_wrap {
-                        width: 33%;
-                        margin-top: 5%;
+                        width: 40%;
 
                         .circle {
-                            width: 25vw;
-                            height: 25vw;
+                            width: 23vw;
+                            height: 23vw;
                         }
 
                     }
@@ -715,8 +728,14 @@
 
                 .desc {
                     width: 45%;
-                    font-size: 1.2vw;
-                    margin-top: 5vh;
+                    font-size: 1.3vw;
+                    margin-left: 2vw;
+
+
+                    .work_btn {
+                        margin-top: 1.2vw;
+                    }
+
                 }
             }
 
@@ -746,6 +765,10 @@
                     width: 45%;
                     font-size: 1.2vw;
                     margin-left: -2vw;
+
+                    .work_btn {
+                        margin-top: 1.2vw;
+                    }
                 }
             }
 
@@ -753,19 +776,21 @@
             &.right {
                 .center_text {
                     font-size: 11vw;
-                    // left: 30%;
+                    left: 20%;
                 }
 
                 .work_img_wrap {
-                    height: 50vh;
+                    .work_img {
+                        width: 60%;
+                    }
+
 
                     .circle_wrap {
-                        width: 33%;
-                        margin-top: 5%;
+                        width: 40%;
 
                         .circle {
-                            width: 25vw;
-                            height: 25vw;
+                            width: 23vw;
+                            height: 23vw;
                         }
 
                     }
@@ -774,8 +799,12 @@
 
                 .desc {
                     width: 45%;
-                    font-size: 1.2vw;
-                    margin-top: 5vh;
+                    font-size: 1.3vw;
+                    margin-right: 0vw;
+
+                    .work_btn {
+                        margin-top: 1.2vw;
+                    }
                 }
             }
 
@@ -794,7 +823,6 @@
 @media (max-width: 800px) {
     .work_Detail {
         cursor: auto;
-        display: block;
 
         .mouse__cursor {
             display: none;
@@ -802,11 +830,12 @@
 
         .work__title {
             h2 {
+                margin-top: 7vw;
                 font-size: 6vw;
             }
 
             span {
-                font-size: 2vw;
+                font-size: 2.5vw;
             }
         }
 
@@ -815,40 +844,46 @@
 
             &.top_l,
             &.top_r,
-            &.left,
             &.bottom,
-            &.right {
+            &.top_l {
                 width: 100%;
-                height: 70%;
+                height: 100%;
                 display: flex;
                 flex-wrap: wrap;
-                align-content: center;
+                align-content: space-around;
                 justify-content: center;
+                align-items: center;
 
                 .center_text {
-                    position: absolute;
-                    top: 3vh;
-                    left: 50%;
-                    transform: translateX(-50%);
-                    text-transform: uppercase;
+                    text-align: center;
+                    display: inline-block;
+                    width: 100%;
+                    position: relative;
+                    left: 0;
+                    right: 0;
+                    top: 0;
                     font-size: 11vw;
                 }
 
                 .work_img_wrap {
                     width: 100%;
-                    height: 60%;
+                    // height: 70%;
+                    height: 50%;
                     display: flex;
                     flex-wrap: wrap;
                     flex-direction: column;
                     align-content: center;
+                    overflow: hidden;
 
                     .work_img {
-                        position: absolute;
-                        top: 15vh;
+                        position: relative;
+                        top: 0;
                         left: 0;
-                        z-index: -1;
+                        right: 0;
                         width: 100%;
-                        height: 30vh;
+                        height: 100%;
+                        margin-right: 0;
+                        margin-left: 0;
                     }
 
                     .circle_wrap {
@@ -860,13 +895,84 @@
                 .desc {
                     width: 100%;
                     padding: 10px;
-                    font-size: 1.8vw;
+                    font-size: 2.8vw;
+                    margin-right: 0;
+                    margin-left: 0;
+
                     span {}
 
                     .work_btn {
-                        margin-top: 3vh;
+                        margin-top: 5vw;
+
                         a {
-                        font-size: 2.2vw;
+                            font-size: 2.2vw;
+                        }
+                    }
+
+                }
+            }
+
+            &.left,
+            &.right {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                align-content: space-around;
+                justify-content: center;
+                align-items: center;
+
+                .center_text {
+                    text-align: center;
+                    display: inline-block;
+                    width: 100%;
+                    position: relative;
+                    // top: 3vw;
+                    left: 0;
+                    top: 0;
+                    right: 0;
+                    // left: 50%;
+                    // transform: translateX(-50%);
+                    text-transform: uppercase;
+                    font-size: 11vw;
+                }
+
+                .work_img_wrap {
+                    width: 100%;
+                    // height: 70%;
+                    height: 50%;
+                    display: flex;
+                    flex-wrap: wrap;
+                    flex-direction: column;
+                    align-content: center;
+                    overflow: hidden;
+
+                    .work_img {
+                        z-index: -1;
+                        width: 100%;
+                        height: 100%;
+
+                    }
+
+                    .circle_wrap {
+                        display: none;
+                    }
+
+                }
+
+                .desc {
+                    width: 100%;
+                    padding: 10px;
+                    font-size: 2.8vw;
+                    margin-top: 0vw;
+
+                    span {}
+
+                    .work_btn {
+                        margin-top: 5vw;
+
+                        a {
+                            font-size: 2.2vw;
                         }
                     }
 
@@ -876,10 +982,10 @@
 
         .work_back_button {
             span {
-                font-size: 3vw;
+                font-size: 4vw;
             }
 
-            img { 
+            img {
                 width: 3.5vw;
                 height: 3.5vw;
                 bottom: 5vw;

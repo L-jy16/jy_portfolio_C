@@ -1,4 +1,4 @@
-import React, { useEffect,  useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { gsap } from "gsap";
 
@@ -70,7 +70,7 @@ const Movie = () => {
             </div>
             {/* work_center */}
 
-            <Link to="/" className="work_back_button">
+            <Link to="/home" className="work_back_button">
                 <span>Main site</span>
                 <img src={arrow2} alt="arrow" />
             </Link>

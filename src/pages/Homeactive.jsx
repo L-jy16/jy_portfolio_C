@@ -5,12 +5,30 @@ import arrow from '../assets/image/arrow.svg'
 import arrow2 from '../assets/image/arrow2.svg'
 import { useNavigate } from 'react-router-dom';
 
-const Home2 = () => {
-    const [enter, setEnter] = useState("");
+
+
+const Homeactive = () => {
+    const [enter, setEnter] = useState(true);
     const [activedark, setAactivedark] = useState("");
     const [move, setMove] = useState("")
 
     const navgaite = useNavigate();
+
+    // if (setEnter) {
+    //     const animationConfig = {
+    //         opacity: 0,
+    //         scale: 0,
+    //         stagger: {
+    //             amount: 0.2,
+    //             grid: 'auto',
+    //             from: 'end',
+    //         },
+    //         duration: 0.3,
+    //         ease: 'power4.inOut',
+    //     };
+
+    //     gsap.from('.main_img_wrap', animationConfig);
+    // }
 
     const activeHandle = () => {
         setEnter(true);
@@ -469,4 +487,4 @@ const Home2 = () => {
     )
 }
 
-export default Home2
+export default Homeactive
