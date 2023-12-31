@@ -4,7 +4,7 @@ import { gsap } from "gsap";
 
 import arrow2 from '../../assets/image/arrow2.svg'
 
-const Content = () => {
+const Quiz = () => {
     const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
 
     // 마우스 커서
@@ -23,17 +23,17 @@ const Content = () => {
     // 화면 전환 효과
     useEffect(() => {
 
-        gsap.set(".work_img", { opacity: 0, x: "100%" });
-        gsap.set(".work__title, .center_text, .circle_wrap, .content, .work_back_button", { opacity: 0 });
+        gsap.set(".work_img", { opacity: 0, x: "100%", y: "-100%" });
+        gsap.set(".work__title, .center_text, .circle_wrap, .desc, .work_back_button", { opacity: 0 });
 
         setTimeout(() => {
             const tl = gsap.timeline();
 
 
-            tl.to(".work_img", { opacity: 1, x: 0, duration: 0.41 })
+            tl.to(".work_img", { opacity: 1, x: 0, y: 0, duration: 0.41 })
             tl.to(".work__title", { opacity: 1, duration: 0.41 })
             tl.to(".center_text", { opacity: 1, duration: 0.41 })
-            tl.to(".content", { opacity: 1, duration: 0.41 })
+            tl.to(".desc", { opacity: 1, duration: 0.41 })
             tl.to(".circle_wrap", { opacity: 1, duration: 0.41 })
             tl.to(".work_back_button", { opacity: 1, duration: 0.41 })
         })
@@ -50,23 +50,22 @@ const Content = () => {
             </div>
             {/* work__title */}
 
-            <div className="work_center right">
-                <span className='center_text split'>content <p>me</p></span>
+            <div className="work_center top_r">
+                <span className='center_text split'>add-plus <p>site</p></span>
                 <div className="work_img_wrap">
-                    <div className='work_img content'></div>
+                    <div className='work_img quiz'></div>
                     <div className="circle_wrap">
                         <div className='circle'></div>
                     </div>
                 </div>
-
-                <div className="content_link">
-                    <div className="email">
-                        <span>Email : </span>
-                        <Link to="mailto:lee.jiyoung492@gmail.com">lee.jiyoung492@gmail.com</Link>
-                    </div>
-                    <div className="git">
-                        <span>github : </span>
-                        <Link to="https://github.com/L-jy16">https://github.com/L-jy16</Link>
+                <div className="desc">
+                    <span>
+                    JAVASCRIPT과 JSON을 활용하여 퀴즈 게임 사이트를 구현하였습니다.
+                    객관식과 주관식, CBT 유형 등 다양한 문제 유형을 구현 하였으며, 문제를 푸는 시간과, 점수를 알 수 있도록 구현하였습니다.
+                    </span>
+                    <div className="work_btn">
+                        <Link to="/">view</Link>
+                        <Link to="https://github.com/L-jy16/ADD-plus">code</Link>
                     </div>
                 </div>
             </div>
@@ -81,4 +80,4 @@ const Content = () => {
     )
 }
 
-export default Content
+export default Quiz

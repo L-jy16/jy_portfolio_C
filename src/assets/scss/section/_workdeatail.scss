@@ -9,6 +9,20 @@
     position: relative;
     cursor: none;
 
+    .comment_link {
+        text-align: right;
+        font-size: 1.5vw;
+        font-family: var(--mainEn-font);
+        margin-left: 1vw;
+        padding: 1vw;
+        text-transform: uppercase;
+
+        &:hover {
+            color: var(--white200);
+        }
+    }
+
+
 
     .mouse__cursor {
         position: fixed;
@@ -305,6 +319,12 @@
                     height: 90%;
                     z-index: -1;
 
+                    &.blog {
+                        background-image: url(../../image/i5-min.png);
+                        background-position: center;
+                        background-size: cover;
+                    }
+
                     &.youtube {
                         background-image: url(../../image/i6-min.png);
                         background-position: center;
@@ -521,6 +541,12 @@
                     height: 90%;
                     z-index: -1;
 
+                    &.search {
+                        background-image: url(../../image/i1-min.png);
+                        background-position: center;
+                        background-size: cover;
+                    }
+
                     &.content {
                         background-image: url(../../image/i4-min.png);
                         background-position: center;
@@ -560,6 +586,37 @@
 
             }
 
+            .content_link {
+                width: 40%;
+                margin-top: 5vw;
+                margin-top: 5vw;
+                font-size: 1vw;
+                margin-right: 18vw;
+
+                .email,
+                .git {
+                    width: 100%;
+
+                    span {
+                        font-family: var(--mainEn-font);
+                        font-size: 2vw;
+                        margin-right: 1vw;
+                        text-transform: uppercase;
+                    }
+
+                    a {
+                        font-family: var(--mainEn-font);
+                        font-size: 2vw;
+                        transition: all 0.3s ease-in-out;
+
+                        &:hover {
+                            color: var(--white);
+                            transform: scale(1.1);
+                        }
+                    }
+                }
+            }
+
             .desc {
                 width: 40%;
                 font-family: var(--mainKo-font);
@@ -570,6 +627,7 @@
                 span {
                     width: 100%;
                 }
+
 
                 .work_btn {
                     text-align: right;
@@ -589,6 +647,8 @@
             }
         }
     }
+
+
 
     .work_back_button {
         // height: 10%;
@@ -797,6 +857,25 @@
 
                 }
 
+                .content_link {
+                    width: 45%;
+                    margin-right: 0;
+
+                    .email,
+                    .git {
+                        width: 100%;
+
+                        span {
+                            font-size: 3vw;
+                        }
+
+                        a {
+                            font-size: 3vw;
+
+                        }
+                    }
+                }
+
                 .desc {
                     width: 45%;
                     font-size: 1.3vw;
@@ -958,6 +1037,26 @@
                         display: none;
                     }
 
+                }
+
+                .content_link {
+                    width: 100%;
+                    text-align: center;
+                    margin-top: -2vw;
+
+                    .email,
+                    .git {
+                        width: 100%;
+
+                        span {
+                            font-size: 5vw;
+                        }
+
+                        a {
+                            font-size: 5vw;
+
+                        }
+                    }
                 }
 
                 .desc {

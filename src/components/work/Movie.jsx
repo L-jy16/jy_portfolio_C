@@ -41,6 +41,7 @@ const Movie = () => {
 
     return (
         <div className='work_Detail'>
+            <Link to="/comment" className='comment_link'>comment</Link>
             <div className="mouse__cursor" style={{ left: cursorPosition.x, top: cursorPosition.y }}></div>
             <div className="work__title">
                 <h2>portfolio</h2>
@@ -58,13 +59,12 @@ const Movie = () => {
                 </div>
                 <div className="desc">
                     <span>
-                        어떤 일이라도 노력하고 즐기면  그 결과는 빛을 바란다고 생각합니다.
-                        신입의 열정과 도전정신을 깊숙히 새기며 배움에 있어 겸손함을 유지하며 세부적인 곳까지 파고드는 개발자가 되겠습니다.
-                        신을 깊숙히 새기며 배움에 있어 겸손함을 유지하며 세부적인 곳까지 파고드는 개발자가 되겠습니다.
+                    VUE.JS와 TMDB API를 활용하여 구현한 영화 사이트 입니다.
+                    최신 영화와 개봉 예정인 영화, 인기 영화, 최고 평점 영화 정보를 제공하고 있으며, 검색 기능을 통해 원하는 영화를 찾을 수 있게 구현하였습니다.
                     </span>
                     <div className="work_btn">
-                        <Link to="/">view</Link>
-                        <Link to="/">code</Link>
+                        <Link to="https://lee-movie.netlify.app/">view</Link>
+                        <Link to="https://github.com/L-jy16/movie_vue">code</Link>
                     </div>
                 </div>
             </div>

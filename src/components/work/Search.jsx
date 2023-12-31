@@ -2,9 +2,10 @@ import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { gsap } from "gsap";
 
+
 import arrow2 from '../../assets/image/arrow2.svg'
 
-const Content = () => {
+const Search = () => {
     const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
 
     // 마우스 커서
@@ -23,26 +24,23 @@ const Content = () => {
     // 화면 전환 효과
     useEffect(() => {
 
-        gsap.set(".work_img", { opacity: 0, x: "100%" });
-        gsap.set(".work__title, .center_text, .circle_wrap, .content, .work_back_button", { opacity: 0 });
+        gsap.set(".work_img", { opacity: 0, y: "-100%", x: "100%" });
+        gsap.set(".work__title, .center_text, .circle_wrap, .desc, .work_back_button", { opacity: 0 });
 
         setTimeout(() => {
             const tl = gsap.timeline();
 
 
-            tl.to(".work_img", { opacity: 1, x: 0, duration: 0.41 })
+            tl.to(".work_img", { opacity: 1, y: 0, x: 0, duration: 0.41 })
             tl.to(".work__title", { opacity: 1, duration: 0.41 })
             tl.to(".center_text", { opacity: 1, duration: 0.41 })
-            tl.to(".content", { opacity: 1, duration: 0.41 })
+            tl.to(".desc", { opacity: 1, duration: 0.41 })
             tl.to(".circle_wrap", { opacity: 1, duration: 0.41 })
             tl.to(".work_back_button", { opacity: 1, duration: 0.41 })
         })
     }, [])
-
-
     return (
         <div className='work_Detail'>
-            <Link to="/comment" className='comment_link'>comment</Link>
             <div className="mouse__cursor" style={{ left: cursorPosition.x, top: cursorPosition.y }}></div>
             <div className="work__title">
                 <h2>portfolio</h2>
@@ -51,22 +49,22 @@ const Content = () => {
             {/* work__title */}
 
             <div className="work_center right">
-                <span className='center_text split'>content <p>me</p></span>
+            <Link to="/comment" className='comment_link'>comment</Link>
+                <span className='center_text split'>search <p>site</p></span>
                 <div className="work_img_wrap">
-                    <div className='work_img content'></div>
+                    <div className='work_img search'></div>
                     <div className="circle_wrap">
                         <div className='circle'></div>
                     </div>
                 </div>
-
-                <div className="content_link">
-                    <div className="email">
-                        <span>Email : </span>
-                        <Link to="mailto:lee.jiyoung492@gmail.com">lee.jiyoung492@gmail.com</Link>
-                    </div>
-                    <div className="git">
-                        <span>github : </span>
-                        <Link to="https://github.com/L-jy16">https://github.com/L-jy16</Link>
+                <div className="desc">
+                    <span>
+                        JAVASCRIPT를 활용하여 검색 게임 사이트를 만들었습니다.
+                        메인 페이지는 3D 효과를 이용하여 독창적인 분위기를 연출하였으며, 여러가지 메소드를 사용하여 여러 형태로 검색할 수 있도록 기능을 구현하였습니다.
+                    </span>
+                    <div className="work_btn">
+                        <Link to="/">view</Link>
+                        <Link to="/">code</Link>
                     </div>
                 </div>
             </div>
@@ -81,4 +79,4 @@ const Content = () => {
     )
 }
 
-export default Content
+export default Search

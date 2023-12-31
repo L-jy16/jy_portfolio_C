@@ -41,6 +41,7 @@ const AboutMe = () => {
 
     return (
         <div className='work_Detail'>
+            <Link to="/comment" className='comment_link'>comment</Link>
             <div className="mouse__cursor" style={{ left: cursorPosition.x, top: cursorPosition.y }}></div>
             <div className="work__title">
                 <h2>portfolio</h2>
@@ -58,9 +59,9 @@ const AboutMe = () => {
                 </div>
                 <div className="desc">
                     <span>
-                        어떤 일이라도 노력하고 즐기면  그 결과는 빛을 바란다고 생각합니다.
-                        신입의 열정과 도전정신을 깊숙히 새기며 배움에 있어 겸손함을 유지하며 세부적인 곳까지 파고드는 개발자가 되겠습니다.
-                        신을 깊숙히 새기며 배움에 있어 겸손함을 유지하며 세부적인 곳까지 파고드는 개발자가 되겠습니다.
+                        안녕하세요. 끊임없는 노력과 최선을 다하는 개발자 이지영입니다.
+                        제 좌우명은 "어떤 일을 하더라도 노력하고 최선을 다하며 후회를 남기지 말자"입니다.
+                        개발자의 길에서도 항상 긍정적인 마음가짐으로 일에 임하며, 어떤 도전이라도 기회로 삼아 끊임없이 발전해나가겠습니다.
                     </span>
                 </div>
             </div>

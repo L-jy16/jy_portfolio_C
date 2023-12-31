@@ -75,6 +75,24 @@ const Home2 = () => {
     useEffect(() => {
         const tl = gsap.timeline();
         switch (move) {
+            case "i1":
+                tl.to(".center, #main__title", { opacity: 0, duration: 0.3 })
+                tl.to("#back_button", { opacity: 0, duration: 0.3 })
+                tl.to(".i2", { opacity: 0, duration: 0.3 })
+                tl.to(".i3", { opacity: 0, duration: 0.3 })
+                tl.to(".i4", { opacity: 0, duration: 0.3 })
+                tl.to(".i5", { opacity: 0, duration: 0.3 })
+                tl.to(".i6", { opacity: 0, duration: 0.3 })
+                tl.to(".i7", { opacity: 0, duration: 0.3 })
+                tl.to(".i8", { opacity: 0, duration: 0.3 })
+                tl.to(".i9", { opacity: 0, duration: 0.3 })
+                tl.to(".i10", { opacity: 0, duration: 0.3 })
+                tl.to(".i11", { opacity: 0, duration: 0.3 })
+                tl.to(".i12", { opacity: 0, duration: 0.3 })
+                tl.to(".a2", { x: "0%", y: "-100%", duration: 0.3 })
+                    .add(() => navgaite("/search"));
+                // navgaite("/search")
+                break;
             case "i2":
                 tl.to(".center, #main__title", { opacity: 0, duration: 0.3 })
                 tl.to("#back_button", { opacity: 0, duration: 0.3 })
@@ -128,6 +146,24 @@ const Home2 = () => {
                 tl.to(".a4", { x: "0%", y: "-100%", duration: 0.3 })
                     .add(() => navgaite("/content"));
                 // navgaite("/content")
+                break;
+            case "i5":
+                tl.to(".center, #main__title", { opacity: 0, duration: 0.3 })
+                tl.to("#back_button", { opacity: 0, duration: 0.3 })
+                tl.to(".i1", { opacity: 0, duration: 0.3 })
+                tl.to(".i2", { opacity: 0, duration: 0.3 })
+                tl.to(".i3", { opacity: 0, duration: 0.3 })
+                tl.to(".i5", { opacity: 0, duration: 0.3 })
+                tl.to(".i6", { opacity: 0, duration: 0.3 })
+                tl.to(".i7", { opacity: 0, duration: 0.3 })
+                tl.to(".i8", { opacity: 0, duration: 0.3 })
+                tl.to(".i9", { opacity: 0, duration: 0.3 })
+                tl.to(".i10", { opacity: 0, duration: 0.3 })
+                tl.to(".i11", { opacity: 0, duration: 0.3 })
+                tl.to(".i12", { opacity: 0, duration: 0.3 })
+                tl.to(".a4", { x: "0%", y: "-100%", duration: 0.3 })
+                    .add(() => navgaite("/blog"));
+                // navgaite("/blog")
                 break;
             case "i6":
                 tl.to(".center, #main__title", { opacity: 0, duration: 0.3 })
@@ -284,10 +320,10 @@ const Home2 = () => {
                     >
                         {/* <div className='main_img i1'> */}
                         <div className={` ${activedark ? (activedark === 'i1' ? 'main_img activedark i1' : 'main_img gray i1') : 'main_img i1'}`}>
-                            {/* <div className="move">
+                            <div className="move">
                                 <img src={arrow2} alt="arrow" />
-                                <span>none</span>
-                            </div> */}
+                                <span>Search</span>
+                            </div>
                         </div>
                     </div>
                     <div
@@ -344,10 +380,10 @@ const Home2 = () => {
                     >
                         {/* <div className='main_img i5'> */}
                         <div className={` ${activedark ? (activedark === 'i5' ? 'main_img activedark i5' : 'main_img gray i5') : 'main_img i5'}`}>
-                            {/* <div className="move">
+                            <div className="move">
                                 <img src={arrow2} alt="arrow" />
-                                <span>none</span>
-                            </div> */}
+                                <span>Blog</span>
+                            </div>
                         </div>
                     </div>
                 </div>

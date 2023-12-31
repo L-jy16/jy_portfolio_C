@@ -42,6 +42,7 @@ const Mouse = () => {
 
     return (
         <div className='work_Detail'>
+            <Link to="/comment" className='comment_link'>comment</Link>
             <div className="mouse__cursor" style={{ left: cursorPosition.x, top: cursorPosition.y }}></div>
             <div className="work__title">
                 <h2>portfolio</h2>
@@ -59,13 +60,12 @@ const Mouse = () => {
                 </div>
                 <div className="desc">
                     <span>
-                        어떤 일이라도 노력하고 즐기면  그 결과는 빛을 바란다고 생각합니다.
-                        신입의 열정과 도전정신을 깊숙히 새기며 배움에 있어 겸손함을 유지하며 세부적인 곳까지 파고드는 개발자가 되겠습니다.
-                        신을 깊숙히 새기며 배움에 있어 겸손함을 유지하며 세부적인 곳까지 파고드는 개발자가 되겠습니다.
+                    JAVASCRIPT와 GSAP 활용하여 여러 유형의 마우스 효과를 보여 줄 수 있는 사이트를 만들었습니다.
+                    마우스 위치 정보와 마우스 커서 디자인, 돋보기 효과 등의 마우스 효과를 JAVASCRIPT와 GSAP 2가지 방법으로 구현하였습니다.
                     </span>
                     <div className="work_btn">
-                        <Link to="/">view</Link>
-                        <Link to="/">code</Link>
+                        <Link to="http://ljy16.dothome.co.kr/javascript/mouse/mouse01.html">view</Link>
+                        <Link to="https://github.com/L-jy16/webs2024/tree/main/javascript/mouse">code</Link>
                     </div>
                 </div>
             </div>

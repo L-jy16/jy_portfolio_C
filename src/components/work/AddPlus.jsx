@@ -42,6 +42,7 @@ const AddPlus = () => {
 
     return (
         <div className='work_Detail'>
+            <Link to="/comment" className='comment_link'>comment</Link>
             <div className="mouse__cursor" style={{ left: cursorPosition.x, top: cursorPosition.y }}></div>
             <div className="work__title">
                 <h2>portfolio</h2>
@@ -59,13 +60,12 @@ const AddPlus = () => {
                 </div>
                 <div className="desc">
                     <span>
-                        어떤 일이라도 노력하고 즐기면  그 결과는 빛을 바란다고 생각합니다.
-                        신입의 열정과 도전정신을 깊숙히 새기며 배움에 있어 겸손함을 유지하며 세부적인 곳까지 파고드는 개발자가 되겠습니다.
-                        신을 깊숙히 새기며 배움에 있어 겸손함을 유지하며 세부적인 곳까지 파고드는 개발자가 되겠습니다.
+                    NODE.JS를 활용하여 구현한 대학 정보포털 및 커뮤니티 사이트입니다. 
+                    MongoDB, Naver Cloud, Firebase, Career Net를 활용하여 구현한 사이트이며, 대학교 정보와 학과 정보를 제공하며 커뮤니티를 활용하여 다양한 정보를 얻을 수 있습니다.
                     </span>
                     <div className="work_btn">
                         <Link to="/">view</Link>
-                        <Link to="/">code</Link>
+                        <Link to="https://github.com/L-jy16/ADD-plus">code</Link>
                     </div>
                 </div>
             </div>

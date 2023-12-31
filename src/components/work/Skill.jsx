@@ -41,6 +41,7 @@ const Skill = () => {
 
     return (
         <div className='work_Detail'>
+            <Link to="/comment" className='comment_link'>comment</Link>
             <div className="mouse__cursor" style={{ left: cursorPosition.x, top: cursorPosition.y }}></div>
             <div className="work__title">
                 <h2>portfolio</h2>

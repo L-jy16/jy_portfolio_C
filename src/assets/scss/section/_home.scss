@@ -99,7 +99,7 @@
                                     height: 2.5vw;
                                     padding: 0.5vw;
                                     position: absolute;
-                                    top: 1.8vw;
+                                    top: 3vh;
                                     right: 1vw;
                                 }
 
@@ -214,7 +214,7 @@
                                     height: 2.5vw;
                                     padding: 0.5vw;
                                     position: absolute;
-                                    bottom: 1.8vw;
+                                    bottom: 3vh;
                                     right: 1vw;
                                 }
 
@@ -279,10 +279,8 @@
             }
         }
 
-
-
         .up {
-            margin: 2vw 0 1vw 0;
+            margin: 2vh 0 1vh 0;
             width: 25%;
             display: flex;
             justify-content: space-between;
@@ -356,7 +354,7 @@
         }
 
         .down {
-            margin: 1vw 0 2vw 0;
+            margin: 1vh 0 2vh 0;
             width: 35%;
             display: flex;
             justify-content: space-between;
@@ -454,7 +452,7 @@
 
         img {
             width: 2vw;
-            margin-top: -0.3vw;
+            margin-top: -0.3vh;
         }
 
         &:hover {
@@ -496,12 +494,13 @@
 
                 .up {
                     width: 90%;
-                    margin-top: 23vh;
+                    margin: 23vh 0 1vh 0;
                     height: 20%;
 
                     .main_img_wrap {
                         width: 49%;
                         height: 6vh;
+                        margin-bottom: 2vh;
 
                         &:hover {
                             .main_img {
@@ -543,11 +542,13 @@
                 .down {
                     width: 90%;
                     height: 20%;
+                    margin-top: 3vh;
 
 
                     .main_img_wrap {
                         width: 49%;
                         height: 6vh;
+                        margin-bottom: 2vh;
 
                         &:hover {
                             .main_img {
@@ -579,14 +580,14 @@
             }
 
             .up {
-                margin: 5vw 0 1vw 0;
-                width: 80%;
+                margin-top: 8vh;
+                width: 90%;
                 flex-wrap: wrap;
 
                 .main_img_wrap {
                     width: 49%;
-                    height: 7vw;
-                    margin-bottom: 1vw;
+                    height: 10vw;
+                    margin-bottom: 1.5vh;
 
                     &:last-child {
                         width: 100%;
@@ -599,14 +600,14 @@
             }
 
             .down {
-                margin: -1vw 0 1vw 0;
-                width: 80%;
+                margin: -1vh 0 10vh 0;
+                width: 90%;
                 flex-wrap: wrap;
 
                 .main_img_wrap {
                     width: 49%;
-                    height: 7vw;
-                    margin-bottom: 1vw;
+                    height: 10vw;
+                    margin-bottom: 1.5vh;
 
                     &:first-child {
                         width: 100%;

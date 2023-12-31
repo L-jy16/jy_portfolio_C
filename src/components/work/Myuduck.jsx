@@ -42,6 +42,7 @@ const Myuduck = () => {
 
     return (
         <div className='work_Detail'>
+            <Link to="/comment" className='comment_link'>comment</Link>
             <div className="mouse__cursor" style={{ left: cursorPosition.x, top: cursorPosition.y }}></div>
             <div className="work__title">
                 <h2>portfolio</h2>
@@ -59,13 +60,13 @@ const Myuduck = () => {
                 </div>
                 <div className="desc">
                     <span>
-                        어떤 일이라도 노력하고 즐기면  그 결과는 빛을 바란다고 생각합니다.
-                        신입의 열정과 도전정신을 깊숙히 새기며 배움에 있어 겸손함을 유지하며 세부적인 곳까지 파고드는 개발자가 되겠습니다.
-                        신을 깊숙히 새기며 배움에 있어 겸손함을 유지하며 세부적인 곳까지 파고드는 개발자가 되겠습니다.
+                    PHP를 활용하여 만든 '뮤지컬 포털 사이트'입니다.
+                    서울 대극장 정보와 배우, 뮤지컬 소식을 제공하며, 게시판과 회원가입/로그인 기능이 있습니다. 
+                    MySQL 데이터베이스 활용하여 게시판과 회원 정보를 효과적으로 관리하였습니다.
                     </span>
                     <div className="work_btn">
-                        <Link to="/">view</Link>
-                        <Link to="/">code</Link>
+                        <Link to="http://ljy16.dothome.co.kr/myuduck/main/main.php">view</Link>
+                        <Link to="https://github.com/L-jy16/myuduck">code</Link>
                     </div>
                 </div>
             </div>
