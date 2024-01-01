@@ -117,6 +117,7 @@
 
                         &:hover {
                             transform: scale(1.1);
+
                         }
                     }
 
@@ -479,6 +480,150 @@
 
             }
         }
+
+        &.right {
+            position: relative;
+            width: 100%;
+            height: 70%;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: center;
+            justify-content: center;
+
+            .center_text {
+                position: absolute;
+                top: 1vw;
+                left: 15%;
+                text-transform: uppercase;
+                font-family: var(--mainEn-font);
+                font-size: 10vw;
+                line-height: 1;
+
+                p {
+                    font-weight: lighter;
+                    display: inline-block;
+                }
+            }
+
+
+            .work_img_wrap {
+                width: 100%;
+                // height: 50vh;
+                height: 60%;
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: row-reverse;
+                justify-content: space-between;
+                align-items: center;
+
+                .work_img {
+                    width: 65%;
+                    height: 90%;
+                    z-index: -1;
+
+                    &.search {
+                        background-image: url(../../image/i1-min.png);
+                        background-position: center;
+                        background-size: cover;
+                    }
+
+                    &.content {
+                        background-image: url(../../image/i4-min.png);
+                        background-position: center;
+                        background-size: cover;
+                    }
+
+                    &.gsap {
+                        background-image: url(../../image/i7-min.png);
+                        background-position: center;
+                        background-size: cover;
+                    }
+                }
+
+                .circle_wrap {
+                    width: 30%;
+                    height: 100%;
+                    display: flex;
+                    align-items: flex-end;
+                    align-content: flex-end;
+                    justify-content: center;
+                    margin-top: 5vw;
+                    margin-right: 0vw;
+
+                    .circle {
+                        width: 300px;
+                        height: 300px;
+                        border: 1px solid var(--font-color);
+                        border-radius: 50%;
+                        transition: all 0.3s ease-in-out;
+
+                        &:hover {
+                            transform: scale(1.1);
+                        }
+                    }
+
+                }
+
+            }
+
+            .content_link {
+                width: 40%;
+                font-family: var(--mainKo-font);
+                margin-top: 5vw;
+                margin-right: 18vw;
+
+                .email,
+                .git {
+                    width: 100%;
+
+                    span {
+                        font-size: 2vw;
+                        text-transform: uppercase;
+                    }
+
+                    a {
+                        font-size: 2vw;
+                        transition: all 0.3s ease-in-out;
+
+                        &:hover {
+                            color: var(--white200);
+                            text-decoration: underline;
+                            text-underline-position: under;
+                            font-size: 2.1vw;
+                        }
+                    }
+                }
+            }
+
+            .desc {
+                width: 40%;
+                font-family: var(--mainKo-font);
+                margin-top: 5vw;
+                font-size: 1vw;
+                margin-right: 18vw;
+
+                span {
+                    width: 100%;
+                }
+
+                .work_btn {
+                    text-align: right;
+
+                    a {
+                        font-size: 1.5vw;
+                        padding: 5px 10px;
+                        font-family: var(--mainEn-font);
+                        text-transform: uppercase;
+
+                        &:hover {
+                            color: var(--white);
+                        }
+                    }
+                }
+
+            }
+        }
+
 
         &.skill {
             width: 100%;
