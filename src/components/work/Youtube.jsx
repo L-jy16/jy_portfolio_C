@@ -25,7 +25,7 @@ const Youtube = () => {
     useEffect(() => {
 
         gsap.set(".work_img", { opacity: 0, x: "-100%" });
-        gsap.set(".work__title, .center_text, .circle_wrap, .desc, .work_back_button", { opacity: 0 });
+        gsap.set(".work__title, .center_text, .circle_wrap, .desc, .work_back_button, .comment_link", { opacity: 0 });
 
         setTimeout(() => {
             const tl = gsap.timeline();
@@ -37,6 +37,7 @@ const Youtube = () => {
             tl.to(".desc", { opacity: 1, duration: 0.41 })
             tl.to(".circle_wrap", { opacity: 1, duration: 0.41 })
             tl.to(".work_back_button", { opacity: 1, duration: 0.41 })
+            tl.to(".comment_link", { opacity: 1, duration: 0.41 })
         })
     }, [])
 
@@ -50,7 +51,6 @@ const Youtube = () => {
             {/* work__title */}
 
             <div className="work_center left">
-                <Link to="/comment" className='comment_link'>comment</Link>
                 <span className='center_text split'>youtube <p>site</p></span>
                 <div className="work_img_wrap">
                     <div className='work_img youtube'></div>
@@ -71,10 +71,14 @@ const Youtube = () => {
             </div>
             {/* work_center */}
 
-            <Link to="/home" className="work_back_button">
-                <span>Main site</span>
-                <img src={arrow2} alt="arrow" />
-            </Link>
+            <div className="link_button">
+                <Link to='/home' className="work_back_button">
+                    <span>Main site</span>
+                    <img src={arrow2} alt="arrow" />
+                </Link>
+
+                <Link to="/comment" className='comment_link'>comment</Link>
+            </div>
             {/* work_back_button */}
         </div>
     )
