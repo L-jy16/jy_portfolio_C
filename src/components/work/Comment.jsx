@@ -8,6 +8,7 @@ import arrow2 from '../../assets/image/arrow2.svg'
 const Comment = () => {
 
     const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
+    
 
     // 마우스 커서
     const handleMouseMove = (e) => {
@@ -38,7 +39,6 @@ const Comment = () => {
             tl.to(".comment", { opacity: 1, duration: 0.41 })
         })
     }, [])
-
 
     return (
         <>

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { gsap } from "gsap";
 
 
@@ -7,6 +7,7 @@ import arrow2 from '../../assets/image/arrow2.svg'
 
 const Gsap = () => {
     const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
+    const navgaite = useNavigate();
 
     // 마우스 커서
     const handleMouseMove = (e) => {
@@ -41,6 +42,10 @@ const Gsap = () => {
         })
     }, [])
 
+    const commentHandle = () => {
+        navgaite("/comment");
+    }
+
     return (
         <div className='work_Detail'>
             <div className="mouse__cursor" style={{ left: cursorPosition.x, top: cursorPosition.y }}></div>
@@ -55,7 +60,9 @@ const Gsap = () => {
                 <div className="work_img_wrap">
                     <div className='work_img gsap'></div>
                     <div className="circle_wrap">
-                        <div className='circle'></div>
+                        <div className='circle' onClick={() => commentHandle()}>
+                            <div className="coin"></div>
+                        </div>
                     </div>
                 </div>
                 <div className="desc">

@@ -90,7 +90,7 @@ const Skill = () => {
                     <img src={arrow2} alt="arrow" />
                 </Link>
 
-                <Link to="/comment" className='comment_link'>comment</Link>
+                <Link to="/comment" className='comment_link_skill'>comment</Link>
             </div>
             {/* work_back_button */}
         </div>
