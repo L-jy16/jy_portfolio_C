@@ -25,7 +25,7 @@ const Blog = () => {
     // 화면 전환 효과
     useEffect(() => {
 
-        gsap.set(".work_img", { opacity: 0, x: "-100%", y: "-100%" });
+        gsap.set(".work_img", { opacity: 0, x: "100%", y: "-100%" });
         gsap.set(".work__title, .center_text, .circle_wrap, .desc, .work_back_button, .comment_link", { opacity: 0 });
 
         setTimeout(() => {
@@ -55,7 +55,7 @@ const Blog = () => {
             </div>
             {/* work__title */}
 
-            <div className="work_center left">
+            <div className="work_center bottom">
                 <span className='center_text split'>blog <p>site</p></span>
                 <div className="work_img_wrap">
                     <div className='work_img blog'></div>
@@ -67,9 +67,9 @@ const Blog = () => {
                 </div>
                 <div className="desc">
                     <span>
-                    PHP를 활용하여 구현한 간단한 블로그 사이트입니다. 
-                    게시판과 회원가입, 로그인 기능으로 구성되어 있습니다.
-                    MySQL 데이터베이스를 통해 사용자 정보, 게시글, 댓글 등의 데이터를 효과적으로 저장 및 관리하고 있습니다
+                        PHP를 활용하여 구현한 간단한 블로그 사이트입니다.
+                        게시판과 회원가입, 로그인 기능으로 구성되어 있습니다.
+                        MySQL 데이터베이스를 통해 사용자 정보, 게시글, 댓글 등의 데이터를 효과적으로 저장 및 관리하고 있습니다
                     </span>
                     <div className="work_btn">
                         <Link to="http://ljy16.dothome.co.kr/php/main/main.php">view</Link>

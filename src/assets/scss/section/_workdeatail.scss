@@ -170,6 +170,7 @@
 
                 .work_btn {
                     text-align: right;
+                    margin-top: 2vh;
 
                     a {
                         font-size: 1.5vw;
@@ -310,6 +311,7 @@
 
                 .work_btn {
                     text-align: right;
+                    margin-top: 2vh;
 
                     a {
                         font-size: 1.5vw;
@@ -368,12 +370,6 @@
                     width: 65%;
                     height: 90%;
                     z-index: -1;
-
-                    &.blog {
-                        background-image: url(../../image/i5-min.png);
-                        background-position: center;
-                        background-size: cover;
-                    }
 
                     &.youtube {
                         background-image: url(../../image/i6-min.png);
@@ -457,6 +453,7 @@
 
                 .work_btn {
                     text-align: right;
+                    margin-top: 2vh;
 
                     a {
                         font-size: 1.5vw;
@@ -514,6 +511,12 @@
                     width: 40%;
                     height: 80%;
                     margin-right: 4vw;
+
+                    &.blog {
+                        background-image: url(../../image/i5-min.png);
+                        background-position: center;
+                        background-size: cover;
+                    }
 
                     &.movie {
                         background-image: url(../../image/i10-min.png);
@@ -591,6 +594,7 @@
 
                 .work_btn {
                     text-align: right;
+                    margin-top: 2vh;
 
                     a {
                         font-size: 1.5vw;
@@ -725,7 +729,7 @@
 
             .content_link {
                 width: 40%;
-                font-family: var(--mainKo-font);
+                font-family: var(--mainEn-font);
                 margin-top: 5vw;
                 margin-right: 18vw;
 
@@ -765,6 +769,7 @@
 
                 .work_btn {
                     text-align: right;
+                    margin-top: 2vh;
 
                     a {
                         font-size: 1.5vw;
