@@ -80,7 +80,7 @@ const Blog = () => {
             {/* work_center */}
 
             <div className="link_button">
-                <Link to='/home' className="work_back_button">
+                <Link to='/test' className="work_back_button">
                     <span>Main site</span>
                     <img src={arrow2} alt="arrow" />
                 </Link>

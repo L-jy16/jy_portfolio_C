@@ -3,8 +3,7 @@ import { Routes, Route } from 'react-router-dom'
 
 import Main from './components/layout/Main'
 
-import Home2 from './pages/Home2'
-import Homeactive from './pages/Homeactive'
+import Home from './pages/Home'
 import Skill from './components/work/Skill'
 import AboutMe from './components/work/AboutMe'
 import Content from './components/work/Content'
@@ -20,14 +19,16 @@ import Slide from './components/work/Slide'
 import AddPlus from './components/work/AddPlus'
 import Comment from './components/work/Comment'
 
+import Hometest from './pages/Hometest'
+
 
 const App = () => {
   return (
     <div>
       <Main>
         <Routes>
-          <Route path='/' element={<Home2 />}></Route>
-          <Route path='/home' element={<Homeactive />}></Route>
+          <Route path='/' element={<Home />}></Route>
+          <Route path='/test' element={<Hometest />}></Route>
           <Route path='/skill' element={<Skill />}></Route>
           <Route path='/aboutme' element={<AboutMe />}></Route>
           <Route path='/content' element={<Content />}></Route>
