@@ -153,7 +153,7 @@ const Home2 = () => {
                 tl.to(".i1", { opacity: 0, duration: 0.3 })
                 tl.to(".i2", { opacity: 0, duration: 0.3 })
                 tl.to(".i3", { opacity: 0, duration: 0.3 })
-                tl.to(".i5", { opacity: 0, duration: 0.3 })
+                tl.to(".i4", { opacity: 0, duration: 0.3 })
                 tl.to(".i6", { opacity: 0, duration: 0.3 })
                 tl.to(".i7", { opacity: 0, duration: 0.3 })
                 tl.to(".i8", { opacity: 0, duration: 0.3 })
