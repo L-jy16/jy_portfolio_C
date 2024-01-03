@@ -8,7 +8,7 @@ import arrow2 from '../../assets/image/arrow2.svg'
 const Comment = () => {
 
     const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
-    
+
 
     // 마우스 커서
     const handleMouseMove = (e) => {
@@ -40,6 +40,9 @@ const Comment = () => {
         })
     }, [])
 
+    const modifybtn = () => { }
+    const deletebtn = () => { }
+
     return (
         <>
             <div className='comment__info'>
@@ -50,7 +53,7 @@ const Comment = () => {
                 </div>
                 {/* work__title */}
                 <div className="comment_wrap">
-                <span className='center_text'>comment <p>me</p></span>
+                    <span className='center_text'>comment <p>me</p></span>
                     <div className="comment_img"></div>
                     <div className="comment">
                         <div className="comment__view__wrap">
@@ -59,8 +62,8 @@ const Comment = () => {
                                     <div className="comment_user">
                                         <span className="author">nickname</span>
                                         <span className="date">2023.01.04</span>
-                                        <Link to="/" className="modify">수정</Link>
-                                        <Link to="/" className="delete">삭제</Link>
+                                        <span to="/" className="modify" onClick={() => modifybtn()}>수정</span>
+                                        <span to="/" className="delete" onClick={() => deletebtn()}>삭제</span>
                                     </div>
                                     <p className="comment_info">댓글입니다.댓글입니다.댓글입니다.댓글입니다.</p>
                                 </div>
@@ -70,8 +73,8 @@ const Comment = () => {
                                     <div className="comment_user">
                                         <span className="author">nickname</span>
                                         <span className="date">2023.01.04</span>
-                                        <Link to="/" className="modify">수정</Link>
-                                        <Link to="/" className="delete">삭제</Link>
+                                        <span to="/" className="modify">수정</span>
+                                        <span to="/" className="delete">삭제</span>
                                     </div>
                                     <p className="comment_info">댓글입니다.댓글입니다.댓글입니다.댓글입니다.</p>
                                 </div>
@@ -81,8 +84,8 @@ const Comment = () => {
                                     <div className="comment_user">
                                         <span className="author">nickname</span>
                                         <span className="date">2023.01.04</span>
-                                        <Link to="/" className="modify">수정</Link>
-                                        <Link to="/" className="delete">삭제</Link>
+                                        <span to="/" className="modify">수정</span>
+                                        <span to="/" className="delete">삭제</span>
                                     </div>
                                     <p className="comment_info">
                                         댓글입니다.댓글입니다.댓글입니다.댓글입니다.댓글입니다.댓글입니다.댓글입니다.댓글입니다.댓글입니다.댓글입니다.댓글입니다.댓글입니다.댓글입니다.댓글입니다.</p>
