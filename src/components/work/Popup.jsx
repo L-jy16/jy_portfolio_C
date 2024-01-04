@@ -25,7 +25,6 @@ const Popup = ({ closePopup }) => {
         }
     }, [closePopup])
 
-
     return (
         <div>
             <div className="popup_wrap">

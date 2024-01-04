@@ -6,22 +6,23 @@ import arrow2 from '../../assets/image/arrow2.svg'
 import Popup from './Popup';
 
 const AboutMe = () => {
-    const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
+    // const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
     const [displayPopup, setDisplayPopup] = useState(false);
     // const navgaite = useNavigate();
 
-    // 마우스 커서
-    const handleMouseMove = (e) => {
-        setCursorPosition({ x: e.clientX, y: e.clientY });
-    };
+    // // 마우스 커서
+    // const handleMouseMove = (e) => {
+    //     setCursorPosition({ x: e.clientX, y: e.clientY });
+    // };
 
-    useEffect(() => {
-        document.addEventListener('mousemove', handleMouseMove);
 
-        return () => {
-            document.removeEventListener('mousemove', handleMouseMove);
-        };
-    }, []);
+    // useEffect(() => {
+    //     document.addEventListener('mousemove', handleMouseMove);
+
+    //     return () => {
+    //         document.removeEventListener('mousemove', handleMouseMove);
+    //     };
+    // }, []);
 
     // 화면 전환 효과
     useEffect(() => {
@@ -50,7 +51,7 @@ const AboutMe = () => {
 
     return (
         <div className='work_Detail'>
-            <div className="mouse__cursor" style={{ left: cursorPosition.x, top: cursorPosition.y }}></div>
+            {/* <div className="mouse__cursor" style={{ left: cursorPosition.x, top: cursorPosition.y }}></div> */}
             <div className="work__title">
                 <h2>portfolio</h2>
                 <span>lee ji young</span>
