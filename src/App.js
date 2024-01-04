@@ -19,7 +19,7 @@ import Slide from './components/work/Slide'
 import AddPlus from './components/work/AddPlus'
 import Comment from './components/work/Comment'
 
-import Hometest from './pages/Hometest'
+import Home2 from './pages/Home2'
 
 
 const App = () => {
@@ -28,7 +28,7 @@ const App = () => {
       <Main>
         <Routes>
           <Route path='/' element={<Home />}></Route>
-          <Route path='/test' element={<Hometest />}></Route>
+          <Route path='/test' element={<Home2 />}></Route>
           <Route path='/skill' element={<Skill />}></Route>
           <Route path='/aboutme' element={<AboutMe />}></Route>
           <Route path='/content' element={<Content />}></Route>

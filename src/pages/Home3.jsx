@@ -1,34 +1,43 @@
 import React, { useEffect, useState } from 'react';
 import { gsap } from 'gsap';
 
+import arrow from '../assets/image/arrow.svg'
 import arrow2 from '../assets/image/arrow2.svg'
 import { useNavigate } from 'react-router-dom';
 
-
-
-const Homeactive = () => {
+const Home3 = () => {
+    const [enter, setEnter] = useState("");
     const [activedark, setAactivedark] = useState("");
     const [move, setMove] = useState("")
 
     const navgaite = useNavigate();
 
+    const animationConfig = {
+        opacity: 0,
+        scale: 0,
+        stagger: {
+            amount: 0.2,
+            grid: 'auto',
+            from: 'end',
+        },
+        duration: 0.3,
+        ease: 'power4.inOut',
+    };
+
     useEffect(() => {
-        const animationConfig = {
-            opacity: 0,
-            scale: 0,
-            stagger: {
-                amount: 0.2,
-                grid: 'auto',
-                from: 'end',
-            },
-            duration: 0.3,
-            ease: 'power4.inOut',
-        };
         gsap.from('.main_img_wrap', animationConfig);
+
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
+    const activeHandle = () => {
+        setEnter(true);
+        gsap.from('.main_img_wrap', animationConfig);
+    };
+
     const BackHandle = () => {
-        navgaite("/");
+        setEnter(false);
+        gsap.from('.main_img_wrap', animationConfig);
     };
 
     const handleHover = (index) => {
@@ -40,7 +49,27 @@ const Homeactive = () => {
     };
 
     const LinkHandler = (e) => {
-        setMove(e)
+        if (!enter) {
+            setMove("")
+            console.log('지금은 넘어갈 수 없다!');
+        } else {
+            console.log(e)
+            setMove(e)
+            setEnter(true);
+
+            const selectedLink = document.querySelector(`.main_img.${e}`);
+            if (selectedLink) {
+                selectedLink.classList.add('activedark');
+            }
+
+            const allLinks = document.querySelectorAll('.main_img');
+            allLinks.forEach((link) => {
+                if (link !== selectedLink) {
+                    link.classList.add('gray');
+                }
+            });
+        }
+
     }
 
     useEffect(() => {
@@ -276,7 +305,7 @@ const Homeactive = () => {
             </div>
             {/* main__title */}
 
-            <div id="main_main" className="active">
+            <div id="main_main" className={enter ? "active" : ""}>
                 <div id="back_button" onClick={() => BackHandle()}>
                     <span className="BackButton">back</span>
                 </div>
@@ -470,8 +499,15 @@ const Homeactive = () => {
                 </div>
             </div>
             {/* main_main */}
+
+            <div id="start_button" onClick={() => activeHandle()} className={enter ? "active" : ""}>
+                <span className="StartButton">enter</span>
+                <img src={arrow} alt="버튼" />
+            </div>
+            {/* start_button */}
+
         </div >
     )
 }
 
-export default Homeactive
+export default Home3
