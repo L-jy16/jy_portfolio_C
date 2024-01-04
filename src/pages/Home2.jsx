@@ -371,6 +371,9 @@ const Home2 = () => {
                 <h2>portfolio</h2>
                 <span>lee ji young</span>
             </div>
+            <div className="center">
+                    <span className='center_text'>selected <p>works</p></span>
+                </div>
         </div>
     )
 }
