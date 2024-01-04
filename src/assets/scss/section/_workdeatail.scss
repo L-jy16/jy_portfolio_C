@@ -1059,6 +1059,8 @@
             margin-left: 1vw;
             padding: 1vw;
             text-transform: uppercase;
+            color: var(--font-color);
+            background-color: var(--black900);
 
             &:hover {
                 color: var(--white200);
@@ -1582,6 +1584,8 @@
                 margin-left: 1vw;
                 padding: 1vw;
                 text-transform: uppercase;
+                color: var(--font-color);
+                background-color: var(--black900);
 
                 &:hover {
                     color: var(--white200);

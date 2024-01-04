@@ -1,6 +1,31 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import { gsap } from "gsap";
 
-const Popup = () => {
+const Popup = ({ closePopup }) => {
+
+    const modifybtn = () => { }
+    const deletebtn = () => { }
+
+    const closePopupHandler = () => {
+        closePopup();
+    };
+
+    useEffect(() => {
+        if (closePopup) {
+            gsap.set(".popup_wrap", { opacity: 0, xPercent: "0", yPercent: "0" })
+
+            // gsap.to(".popup_wrap", { opacity: 1, xPercent: "100%", yPercent: "100%" })
+            gsap.to(".popup_wrap", {
+                opacity: 1,
+                xPercent: "-100%",
+                yPercent: "-100%",
+                duration: 0.5,
+                ease: "power2.out",
+            });
+        }
+    }, [closePopup])
+
+
     return (
         <div>
             <div className="popup_wrap">
@@ -88,12 +113,10 @@ const Popup = () => {
                         </form>
                     </div>
                 </div>
-
+                <button className="close_button" onClick={closePopupHandler}>
+                    <span>close</span>
+                </button>
             </div>
-
-            <button className="close_button">
-                <span>close</span>
-            </button>
         </div>
     )
 }

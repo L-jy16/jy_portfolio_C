@@ -1,12 +1,15 @@
 import React, { useEffect, useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { gsap } from "gsap";
+
+import Popup from './Popup';
 
 import arrow2 from '../../assets/image/arrow2.svg'
 
 const Movie = () => {
     const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
-    const navgaite = useNavigate();
+    const [displayPopup, setDisplayPopup] = useState(false);
+    // const navgaite = useNavigate();
 
     // 마우스 커서
     const handleMouseMove = (e) => {
@@ -42,7 +45,8 @@ const Movie = () => {
     }, [])
 
     const commentHandle = () => {
-        navgaite("/comment");
+        // navgaite("/comment");
+        setDisplayPopup(true)
     }
 
     return (
@@ -83,9 +87,11 @@ const Movie = () => {
                     <img src={arrow2} alt="arrow" />
                 </Link>
 
-                <Link to="/comment" className='comment_link'>comment</Link>
+                <button className='comment_link' onClick={() => commentHandle()}>comment</button>
             </div>
             {/* work_back_button */}
+
+            {displayPopup && <Popup closePopup={() => setDisplayPopup(false)} />}
         </div>
     )
 }

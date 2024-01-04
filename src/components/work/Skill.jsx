@@ -2,10 +2,13 @@ import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { gsap } from "gsap";
 
+import Popup from './Popup';
+
 import arrow2 from '../../assets/image/arrow2.svg'
 
 const Skill = () => {
     const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
+    const [displayPopup, setDisplayPopup] = useState(false);
 
     // 마우스 커서
     const handleMouseMove = (e) => {
@@ -51,6 +54,11 @@ const Skill = () => {
         })
     }, [])
 
+    const commentHandle = () => {
+        // navgaite("/comment");
+        setDisplayPopup(true)
+    }
+
     return (
         <div className='work_Detail'>
             <div className="mouse__cursor" style={{ left: cursorPosition.x, top: cursorPosition.y }}></div>
@@ -90,9 +98,11 @@ const Skill = () => {
                     <img src={arrow2} alt="arrow" />
                 </Link>
 
-                <Link to="/comment" className='comment_link_skill'>comment</Link>
+                <button className='comment_link_skill' onClick={() => commentHandle()}>comment</button>
             </div>
             {/* work_back_button */}
+
+            {displayPopup && <Popup closePopup={() => setDisplayPopup(false)} />}
         </div>
     )
 }

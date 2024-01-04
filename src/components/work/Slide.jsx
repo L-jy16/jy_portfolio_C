@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { gsap } from "gsap";
+
+import Popup from './Popup';
 
 import arrow2 from '../../assets/image/arrow2.svg'
 
 const Slide = () => {
     const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
-    const navgaite = useNavigate();
+    const [displayPopup, setDisplayPopup] = useState(false);
 
     // 마우스 커서
     const handleMouseMove = (e) => {
@@ -42,7 +44,8 @@ const Slide = () => {
     }, [])
 
     const commentHandle = () => {
-        navgaite("/comment");
+        // navgaite("/comment");
+        setDisplayPopup(true)
     }
 
     return (
@@ -60,7 +63,7 @@ const Slide = () => {
                     <div className='work_img slide'></div>
                     <div className="circle_wrap">
                         <div className='circle' onClick={() => commentHandle()}>
-                            <div className="coin"></div>
+                            {/* <div className="coin"></div> */}
                         </div>
                     </div>
                 </div>
@@ -83,9 +86,11 @@ const Slide = () => {
                     <img src={arrow2} alt="arrow" />
                 </Link>
 
-                <Link to="/comment" className='comment_link'>comment</Link>
+                <button className='comment_link' onClick={() => commentHandle()}>comment</button>
             </div>
             {/* work_back_button */}
+
+            {displayPopup && <Popup closePopup={() => setDisplayPopup(false)} />}
         </div>
     )
 }

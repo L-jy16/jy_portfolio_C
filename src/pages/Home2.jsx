@@ -55,7 +55,6 @@ const Home2 = () => {
         };
 
         gsap.from('.imgs', animationConfig);
-
     }, [])
 
     const manageMouseMove = (e) => {
@@ -125,13 +124,13 @@ const Home2 = () => {
                 <img ref={plane8} src={img08} alt="image03" className='i08' onClick={() => moveHandle("/myuduck")} />
                 <img ref={plane10} src={img10} alt="image04" className='i10' onClick={() => moveHandle("/movie")} />
 
-                <img ref={plane2} src={img02} alt="image05" className='i02' onClick={() => moveHandle("/skill")} />
+                <img ref={plane2} src={img02} alt="image02" className='i02' onClick={() => moveHandle("/skill")} />
                 <img ref={plane4} src={img04} alt="image06" className='i04' onClick={() => moveHandle("/content")} />
                 <img ref={plane7} src={img07} alt="image07" className='i07' onClick={() => moveHandle("/gsap")} />
                 <img ref={plane12} src={img12} alt="image08" className='i12' onClick={() => moveHandle("/addplus")} />
 
                 <img ref={plane3} src={img03} alt="image09" className='i03' onClick={() => moveHandle("/aboutme")} />
-                <img ref={plane5} src={img05} alt="image02" className='i05' onClick={() => moveHandle("/blog")} />
+                <img ref={plane5} src={img05} alt="image05" className='i05' onClick={() => moveHandle("/blog")} />
                 <img ref={plane11} src={img11} alt="image11" className='i11' onClick={() => moveHandle("/slide")} />
                 <img ref={plane9} src={img09} alt="image12" className='i09' onClick={() => moveHandle("/mouse")} />
 
