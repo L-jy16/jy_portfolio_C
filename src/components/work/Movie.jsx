@@ -64,7 +64,7 @@ const Movie = () => {
                     <div className='work_img movie'></div>
                     <div className="circle_wrap">
                         <div className='circle' onClick={() => commentHandle()}>
-                            <div className="coin"></div>
+                            {/* <div className="coin"></div> */}
                         </div>
                     </div>
                 </div>
