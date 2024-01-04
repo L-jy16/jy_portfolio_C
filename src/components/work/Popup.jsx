@@ -10,20 +10,20 @@ const Popup = ({ closePopup }) => {
         closePopup();
     };
 
-    // useEffect(() => {
-    //     if (closePopup) {
-    //         gsap.set(".popup_wrap", { opacity: 0, xPercent: "0", yPercent: "0" })
+    useEffect(() => {
+        if (closePopup) {
+            gsap.set(".popup_wrap", { opacity: 0, xPercent: "0", yPercent: "0" })
 
-    //         gsap.to(".popup_wrap", {
-    //             opacity: 1,
-    //             xPercent: "-100%",
-    //             yPercent: "-100%",
-    //             duration: 0.5,
-    //             ease: "power2.out",
+            gsap.to(".popup_wrap", {
+                opacity: 1,
+                xPercent: "-100%",
+                yPercent: "-100%",
+                duration: 0.5,
+                ease: "power2.out",
 
-    //         });
-    //     }
-    // }, [closePopup])
+            });
+        }
+    }, [closePopup])
 
 
     return (
