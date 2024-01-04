@@ -67,9 +67,9 @@ const Myuduck = () => {
                 </div>
                 <div className="desc">
                     <span>
-                    PHP를 활용하여 만든 '뮤지컬 포털 사이트'입니다.
-                    서울 대극장 정보와 배우, 뮤지컬 소식을 제공하며, 게시판과 회원가입/로그인 기능이 있습니다. 
-                    MySQL 데이터베이스 활용하여 게시판과 회원 정보를 효과적으로 관리하였습니다.
+                        PHP를 활용하여 만든 '뮤지컬 포털 사이트'입니다.
+                        서울 대극장 정보와 배우, 뮤지컬 소식을 제공하며, 게시판과 회원가입/로그인 기능이 있습니다.
+                        MySQL 데이터베이스 활용하여 게시판과 회원 정보를 효과적으로 관리하였습니다.
                     </span>
                     <div className="work_btn">
                         <Link to="http://ljy16.dothome.co.kr/myuduck/main/main.php">view</Link>
@@ -80,7 +80,7 @@ const Myuduck = () => {
             {/* work_center */}
 
             <div className="link_button">
-                <Link to='/test' className="work_back_button">
+                <Link to='/home' className="work_back_button">
                     <span>Main site</span>
                     <img src={arrow2} alt="arrow" />
                 </Link>

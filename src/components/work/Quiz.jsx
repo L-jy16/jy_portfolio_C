@@ -66,8 +66,8 @@ const Quiz = () => {
                 </div>
                 <div className="desc">
                     <span>
-                    JAVASCRIPT과 JSON을 활용하여 퀴즈 게임 사이트를 구현하였습니다.
-                    객관식과 주관식, CBT 유형 등 다양한 문제 유형을 구현 하였으며, 문제를 푸는 시간과, 점수를 알 수 있도록 구현하였습니다.
+                        JAVASCRIPT과 JSON을 활용하여 퀴즈 게임 사이트를 구현하였습니다.
+                        객관식과 주관식, CBT 유형 등 다양한 문제 유형을 구현 하였으며, 문제를 푸는 시간과, 점수를 알 수 있도록 구현하였습니다.
                     </span>
                     <div className="work_btn">
                         <Link to="/">view</Link>
@@ -78,7 +78,7 @@ const Quiz = () => {
             {/* work_center */}
 
             <div className="link_button">
-                <Link to='/test' className="work_back_button">
+                <Link to='/home' className="work_back_button">
                     <span>Main site</span>
                     <img src={arrow2} alt="arrow" />
                 </Link>

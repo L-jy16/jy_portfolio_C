@@ -8,7 +8,7 @@ import arrow2 from '../../assets/image/arrow2.svg'
 const Mouse = () => {
     const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
     const navgaite = useNavigate();
-    
+
     // 마우스 커서
     const handleMouseMove = (e) => {
         setCursorPosition({ x: e.clientX, y: e.clientY });
@@ -67,8 +67,8 @@ const Mouse = () => {
                 </div>
                 <div className="desc">
                     <span>
-                    JAVASCRIPT와 GSAP 활용하여 여러 유형의 마우스 효과를 보여 줄 수 있는 사이트를 만들었습니다.
-                    마우스 위치 정보와 마우스 커서 디자인, 돋보기 효과 등의 마우스 효과를 JAVASCRIPT와 GSAP 2가지 방법으로 구현하였습니다.
+                        JAVASCRIPT와 GSAP 활용하여 여러 유형의 마우스 효과를 보여 줄 수 있는 사이트를 만들었습니다.
+                        마우스 위치 정보와 마우스 커서 디자인, 돋보기 효과 등의 마우스 효과를 JAVASCRIPT와 GSAP 2가지 방법으로 구현하였습니다.
                     </span>
                     <div className="work_btn">
                         <Link to="http://ljy16.dothome.co.kr/javascript/mouse/mouse01.html">view</Link>
@@ -79,7 +79,7 @@ const Mouse = () => {
             {/* work_center */}
 
             <div className="link_button">
-                <Link to='/test' className="work_back_button">
+                <Link to='/home' className="work_back_button">
                     <span>Main site</span>
                     <img src={arrow2} alt="arrow" />
                 </Link>

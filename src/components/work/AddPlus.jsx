@@ -66,8 +66,8 @@ const AddPlus = () => {
                 </div>
                 <div className="desc">
                     <span>
-                    NODE.JS를 활용하여 구현한 대학 정보포털 및 커뮤니티 사이트입니다. 
-                    MongoDB, Naver Cloud, Firebase, Career Net를 활용하여 구현한 사이트이며, 대학교 정보와 학과 정보를 제공하며 커뮤니티를 활용하여 다양한 정보를 얻을 수 있습니다.
+                        NODE.JS를 활용하여 구현한 대학 정보포털 및 커뮤니티 사이트입니다.
+                        MongoDB, Naver Cloud, Firebase, Career Net를 활용하여 구현한 사이트이며, 대학교 정보와 학과 정보를 제공하며 커뮤니티를 활용하여 다양한 정보를 얻을 수 있습니다.
                     </span>
                     <div className="work_btn">
                         <Link to="/">view</Link>
@@ -78,7 +78,7 @@ const AddPlus = () => {
             {/* work_center */}
 
             <div className="link_button">
-                <Link to='/test' className="work_back_button">
+                <Link to='/home' className="work_back_button">
                     <span>Main site</span>
                     <img src={arrow2} alt="arrow" />
                 </Link>

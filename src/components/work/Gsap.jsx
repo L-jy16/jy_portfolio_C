@@ -67,8 +67,8 @@ const Gsap = () => {
                 </div>
                 <div className="desc">
                     <span>
-                    GSAP를 활용하여 여러 유형의 애니메이션 효과를 구현한 사이트입니다.
-                    Pin 애니메이션과 텍스트 효과, 나타내기 효과, 회전 효과 등의 다양한 애니메이션 효과를 구현하였습니다.
+                        GSAP를 활용하여 여러 유형의 애니메이션 효과를 구현한 사이트입니다.
+                        Pin 애니메이션과 텍스트 효과, 나타내기 효과, 회전 효과 등의 다양한 애니메이션 효과를 구현하였습니다.
                     </span>
                     <div className="work_btn">
                         <Link to="http://ljy16.dothome.co.kr/javascript/gsap/gsap01.html">view</Link>
@@ -79,7 +79,7 @@ const Gsap = () => {
             {/* work_center */}
 
             <div className="link_button">
-                <Link to='/test' className="work_back_button">
+                <Link to='/home' className="work_back_button">
                     <span>Main site</span>
                     <img src={arrow2} alt="arrow" />
                 </Link>

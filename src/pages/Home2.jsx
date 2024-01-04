@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { gsap } from 'gsap';
 import { useNavigate } from 'react-router-dom';
 
@@ -40,6 +40,23 @@ const Home2 = () => {
 
     const easing = 0.08;
     const speed = 0.01;
+
+    useEffect(() => {
+        const animationConfig = {
+            opacity: 0,
+            scale: 0,
+            stagger: {
+                amount: 0.2,
+                grid: 'auto',
+                from: 'end',
+            },
+            duration: 0.4,
+            ease: 'power4.inOut',
+        };
+
+        gsap.from('.imgs', animationConfig);
+
+    }, [])
 
     const manageMouseMove = (e) => {
         const { movementX, movementY } = e
@@ -127,9 +144,6 @@ const Home2 = () => {
                 <h2>portfolio</h2>
                 <span>lee ji young</span>
             </div>
-            {/* <div id="back_button" onClick={() => BackHandle()}>
-                <span className="BackButton">back</span>
-            </div> */}
         </div>
     )
 }

@@ -66,8 +66,8 @@ const Movie = () => {
                 </div>
                 <div className="desc">
                     <span>
-                    VUE.JS와 TMDB API를 활용하여 구현한 영화 사이트 입니다.
-                    최신 영화와 개봉 예정인 영화, 인기 영화, 최고 평점 영화 정보를 제공하고 있으며, 검색 기능을 통해 원하는 영화를 찾을 수 있게 구현하였습니다.
+                        VUE.JS와 TMDB API를 활용하여 구현한 영화 사이트 입니다.
+                        최신 영화와 개봉 예정인 영화, 인기 영화, 최고 평점 영화 정보를 제공하고 있으며, 검색 기능을 통해 원하는 영화를 찾을 수 있게 구현하였습니다.
                     </span>
                     <div className="work_btn">
                         <Link to="https://lee-movie.netlify.app/">view</Link>
@@ -78,7 +78,7 @@ const Movie = () => {
             {/* work_center */}
 
             <div className="link_button">
-                <Link to='/test' className="work_back_button">
+                <Link to='/home' className="work_back_button">
                     <span>Main site</span>
                     <img src={arrow2} alt="arrow" />
                 </Link>

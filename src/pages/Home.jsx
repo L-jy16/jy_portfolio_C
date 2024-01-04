@@ -26,7 +26,7 @@ const Home = () => {
     }, [])
 
     const activeHandle = () => {
-        navigate("/test")
+        navigate("/home")
     }
 
     return (
