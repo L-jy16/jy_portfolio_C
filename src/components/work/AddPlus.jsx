@@ -65,6 +65,7 @@ const AddPlus = () => {
                     <div className="circle_wrap">
                         <div className='circle' onClick={() => commentHandle()}>
                             {/* <div className="coin"></div> */}
+                            <span>comment</span>
                         </div>
                     </div>
                 </div>

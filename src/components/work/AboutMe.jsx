@@ -6,23 +6,7 @@ import arrow2 from '../../assets/image/arrow2.svg'
 import Popup from './Popup';
 
 const AboutMe = () => {
-    // const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
     const [displayPopup, setDisplayPopup] = useState(false);
-    // const navgaite = useNavigate();
-
-    // // 마우스 커서
-    // const handleMouseMove = (e) => {
-    //     setCursorPosition({ x: e.clientX, y: e.clientY });
-    // };
-
-
-    // useEffect(() => {
-    //     document.addEventListener('mousemove', handleMouseMove);
-
-    //     return () => {
-    //         document.removeEventListener('mousemove', handleMouseMove);
-    //     };
-    // }, []);
 
     // 화면 전환 효과
     useEffect(() => {
