@@ -17,6 +17,8 @@ import img12 from "../assets/image/i12-min.png"
 
 
 const Home2 = () => {
+    const [activedark, setAactivedark] = useState("");
+
     const plane1 = useRef(null);
     const plane2 = useRef(null);
     const plane3 = useRef(null);
@@ -112,11 +114,16 @@ const Home2 = () => {
         setAdd(path)
         setMove(e);
     }
-
+    // click, onMouse 효과
     const clickHandle = () => {
         setIsClicking(false);
     };
 
+    const grayHandle = (index) => {
+        setAactivedark(index);
+    }
+
+    // 화면 전환
     useEffect(() => {
         const tl = gsap.timeline();
         switch (move) {
@@ -341,26 +348,112 @@ const Home2 = () => {
 
     }, [move, navgaite, add])
 
-    // 화면 전환
+
 
     return (
         <div id='active__wrap' onMouseMove={(e) => manageMouseMove(e)} onMouseDown={() => clickHandle()} onMouseUp={() => clickHandle()} >
 
             <div className="imgs">
-                <img ref={plane1} src={img01} alt="image01" className='i01' onClick={() => moveHandle("/search", "i1")} />
-                <img ref={plane6} src={img06} alt="image06" className='i06' onClick={() => moveHandle("/youtube", "i6")} />
-                <img ref={plane8} src={img08} alt="image08" className='i08' onClick={() => moveHandle("/myuduck", "i8")} />
-                <img ref={plane10} src={img10} alt="image10" className='i10' onClick={() => moveHandle("/movie", "i10")} />
+                <img
+                    ref={plane1} src={img01}
+                    alt="image01"
+                    className={` ${activedark ? (activedark === 'i1' ? 'main_img activedark i01' : 'main_img gray i01') : 'main_img i01'}`}
+                    // className='i01'
+                    onClick={() => moveHandle("/search", "i1")}
+                    onMouseEnter={() => grayHandle('i1')}
+                    onMouseLeave={grayHandle} />
+                <img
+                    ref={plane6} src={img06}
+                    alt="image06"
+                    // className='i06'
+                    className={` ${activedark ? (activedark === 'i6' ? 'main_img activedark i06' : 'main_img gray i06') : 'main_img i06'}`}
+                    onClick={() => moveHandle("/youtube", "i6")}
+                    onMouseEnter={() => grayHandle('i6')}
+                    onMouseLeave={grayHandle} />
+                <img
+                    ref={plane8} src={img08}
+                    alt="image08"
+                    // className='i08'
+                    className={` ${activedark ? (activedark === 'i8' ? 'main_img activedark i08' : 'main_img gray i08') : 'main_img i08'}`}
+                    onClick={() => moveHandle("/myuduck", "i8")}
+                    onMouseEnter={() => grayHandle('i8')}
+                    onMouseLeave={grayHandle} />
+                <img
+                    ref={plane10} src={img10}
+                    alt="image10"
+                    // className='i10'
+                    className={` ${activedark ? (activedark === 'i10' ? 'main_img activedark i10' : 'main_img gray i10') : 'main_img i10'}`}
+                    onClick={() => moveHandle("/movie", "i10")}
+                    onMouseEnter={() => grayHandle('i10')}
+                    onMouseLeave={grayHandle} />
 
-                <img ref={plane2} src={img02} alt="image02" className='i02' onClick={() => moveHandle("/skill", "i2")} />
-                <img ref={plane4} src={img04} alt="image04" className='i04' onClick={() => moveHandle("/content", "i4")} />
-                <img ref={plane7} src={img07} alt="image07" className='i07' onClick={() => moveHandle("/gsap", "i7")} />
-                <img ref={plane12} src={img12} alt="image12" className='i12' onClick={() => moveHandle("/addplus", "i12")} />
 
-                <img ref={plane3} src={img03} alt="image03" className='i03' onClick={() => moveHandle("/aboutme", "i3")} />
-                <img ref={plane5} src={img05} alt="image05" className='i05' onClick={() => moveHandle("/blog", "i5")} />
-                <img ref={plane11} src={img11} alt="image11" className='i11' onClick={() => moveHandle("/slide", "i11")} />
-                <img ref={plane9} src={img09} alt="image9" className='i09' onClick={() => moveHandle("/mouse", "i9")} />
+                <img
+                    ref={plane2} src={img02}
+                    alt="image02"
+                    // className='i02'
+                    className={` ${activedark ? (activedark === 'i2' ? 'main_img activedark i02' : 'main_img gray i02') : 'main_img i02'}`}
+                    onClick={() => moveHandle("/skill", "i2")}
+                    onMouseEnter={() => grayHandle('i2')}
+                    onMouseLeave={grayHandle} />
+                <img
+                    ref={plane4} src={img04}
+                    alt="image04"
+                    // className='i04'
+                    className={` ${activedark ? (activedark === 'i4' ? 'main_img activedark i04' : 'main_img gray i04') : 'main_img i04'}`}
+                    onClick={() => moveHandle("/content", "i4")}
+                    onMouseEnter={() => grayHandle('i4')}
+                    onMouseLeave={grayHandle} />
+                <img
+                    ref={plane7} src={img07}
+                    alt="image07"
+                    // className='i07'
+                    className={` ${activedark ? (activedark === 'i7' ? 'main_img activedark i07' : 'main_img gray i07') : 'main_img i07'}`}
+                    onClick={() => moveHandle("/gsap", "i7")}
+                    onMouseEnter={() => grayHandle('")}')}
+                    onMouseLeave={grayHandle} />
+                <img
+                    ref={plane12} src={img12}
+                    alt="image12"
+                    // className='i12'
+                    className={` ${activedark ? (activedark === 'i12' ? 'main_img activedark i12' : 'main_img gray i12') : 'main_img i12'}`}
+                    onClick={() => moveHandle("/addplus", "i12")}
+                    onMouseEnter={() => grayHandle('i12')}
+                    onMouseLeave={grayHandle} />
+
+
+                <img
+                    ref={plane3} src={img03}
+                    alt="image03"
+                    // className='i03'
+                    className={` ${activedark ? (activedark === 'i1' ? 'main_img activedark i03' : 'main_img gray i03') : 'main_img i03'}`}
+                    onClick={() => moveHandle("/aboutme", "i3")}
+                    onMouseEnter={() => grayHandle('i3')}
+                    onMouseLeave={grayHandle} />
+                <img
+                    ref={plane5} src={img05}
+                    alt="image05"
+                    // className='i05'
+                    className={` ${activedark ? (activedark === 'i1' ? 'main_img activedark i05' : 'main_img gray i05') : 'main_img i05'}`}
+                    onClick={() => moveHandle("/blog", "i5")}
+                    onMouseEnter={() => grayHandle('")}')}
+                    onMouseLeave={grayHandle} />
+                <img
+                    ref={plane11} src={img11}
+                    alt="image11"
+                    // className='i11'
+                    className={` ${activedark ? (activedark === 'i1' ? 'main_img activedark i11' : 'main_img gray i11') : 'main_img i11'}`}
+                    onClick={() => moveHandle("/slide", "i11")}
+                    onMouseEnter={() => grayHandle('i11')}
+                    onMouseLeave={grayHandle} />
+                <img
+                    ref={plane9} src={img09}
+                    alt="image9"
+                    // className='i09'
+                    className={` ${activedark ? (activedark === 'i1' ? 'main_img activedark i09' : 'main_img gray i09') : 'main_img i09'}`}
+                    onClick={() => moveHandle("/mouse", "i9")}
+                    onMouseEnter={() => grayHandle('i9')}
+                    onMouseLeave={grayHandle} />
 
                 <div id="back_button" onClick={() => BackHandle()}>
                     <span className="BackButton">back</span>
@@ -372,8 +465,8 @@ const Home2 = () => {
                 <span>lee ji young</span>
             </div>
             <div className="center">
-                    <span className='center_text'>selected <p>works</p></span>
-                </div>
+                <span className='center_text'>selected <p>works</p></span>
+            </div>
         </div>
     )
 }
